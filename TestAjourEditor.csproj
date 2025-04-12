@@ -24,7 +24,7 @@
 		<ApplicationTitle>TestAjourEditor</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.testajoureditor</ApplicationId>
+		<ApplicationId>no.ajourmedia.testajoureditor</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -66,32 +66,16 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 	</ItemGroup>
 
-	<!--
-	<ItemGroup>
-		<ProjectReference Include="..\Ajour.EditorLib\Ajour.EditorLib.csproj" />
-	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net9.0-ios'">
+		<ProvisioningType>manual</ProvisioningType>
+		<CodesignProvision>TestAjourEditor</CodesignProvision>
+		<EnableSGenConc>True</EnableSGenConc>
+	</PropertyGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)'=='net9.0-android'">
-		<Reference Include="Ajour.EditorLib">
-			<HintPath>..\Ajour.EditorLib\bin\Debug\net9.0-android\Ajour.EditorLib.dll</HintPath>
-			<Private>True</Private>
-		</Reference>
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)'=='net9.0-ios'">
-		<Reference Include="Ajour.EditorLib">
-			<HintPath>..\Ajour.EditorLib\bin\Debug\net9.0-ios\Ajour.EditorLib.dll</HintPath>
-		</Reference>
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)'=='net9.0-maccatalyst'">
-		<Reference Include="Ajour.EditorLib">
-			<HintPath>..\Ajour.EditorLib\bin\Debug\net9.0-maccatalyst\Ajour.EditorLib.dll</HintPath>
-		</Reference>
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)'=='net9.0-windows10.0.22621.0'">
-		<Reference Include="Ajour.EditorLib">
-			<HintPath>..\Ajour.EditorLib\bin\Debug\net9.0-windows10.0.22621.0\Ajour.EditorLib.dll</HintPath>
-		</Reference>
-	</ItemGroup>
-	-->
+	<PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Debug'">
+		<ProvisioningType>manual</ProvisioningType>
+		<CodesignProvision>MacOS - Catalyst - TestAjourEditor</CodesignProvision>
+		<EnableSGenConc>True</EnableSGenConc>
+	</PropertyGroup>
 
 </Project>

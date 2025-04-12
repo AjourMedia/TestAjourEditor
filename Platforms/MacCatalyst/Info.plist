@@ -2,17 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <!-- The Mac App Store requires you specify if the app uses encryption. -->
-    <!-- Please consult https://developer.apple.com/documentation/bundleresources/information_property_list/itsappusesnonexemptencryption -->
-    <!-- <key>ITSAppUsesNonExemptEncryption</key> -->
-    <!-- Please indicate <true/> or <false/> here. -->
-
-    <!-- Specify the category for your app here. -->
-    <!-- Please consult https://developer.apple.com/documentation/bundleresources/information_property_list/lsapplicationcategorytype -->
-    <!-- <key>LSApplicationCategoryType</key> -->
-    <!-- <string>public.app-category.YOUR-CATEGORY-HERE</string> -->
+	<key>CFBundleName</key>
+	<string>TestAjourEditor</string>
+	<key>CFBundleDisplayName</key>
+	<string>TestAjourEditor</string>
+	<key>CFBundleIdentifier</key>
+	<string>no.ajourmedia.TestAjourEditor</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>UIDeviceFamily</key>
 	<array>
+		<integer>1</integer>
 		<integer>2</integer>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -34,17 +38,17 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
-<key>com.apple.security.assets.movies.read-only</key>
-<true/>
-<key>com.apple.security.assets.music.read-only</key>
-<true/>
-<key>com.apple.security.assets.pictures.read-only</key>
-<true/>
-<key>com.apple.security.files.downloads.read-only</key>
-<true/>
-<key>com.apple.security.files.user-selected.read-only</key>
-<true/>
-<key>com.apple.security.personal-information.photos-library</key>
-<true/>
+	<key>com.apple.security.assets.movies.read-only</key>
+	<true/>
+	<key>com.apple.security.assets.music.read-only</key>
+	<true/>
+	<key>com.apple.security.assets.pictures.read-only</key>
+	<true/>
+	<key>com.apple.security.files.downloads.read-only</key>
+	<true/>
+	<key>com.apple.security.files.user-selected.read-only</key>
+	<true/>
+	<key>com.apple.security.personal-information.photos-library</key>
+	<true/>
 </dict>
 </plist>
