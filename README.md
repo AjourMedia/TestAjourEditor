@@ -1,3 +1,11 @@
+# Maui Cross platform Editor-library for HTML, XML and RTF.
+
+## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
+
+
+[![Build Status](Build)](1.4.29)
+
+
 **TODO: TEST AJOUR EDITOR Library**
 1. Create a new MAUI Application
 2. Add Nuget package [Ajour.EditorLib.1.4.xx.nupkg]()
