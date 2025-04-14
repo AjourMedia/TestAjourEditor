@@ -24,7 +24,7 @@
 		<ApplicationTitle>TestAjourEditor</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>no.ajourmedia.testajoureditor</ApplicationId>
+		<ApplicationId>no.ajourmedia.TestAjourEditor</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
