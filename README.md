@@ -20,6 +20,9 @@
 **Todo1:**
 `Skriv noe tekst og klikk på B, I eller U`
 
+- [x] Skriv noe tekst og klikk på B, I eller U (1.4.21)
+- [x] Klikk på Åpne testfil2 med bilder.html (1.4.30)
+
 
 ```cs
 using Microsoft.Extensions.Logging;
