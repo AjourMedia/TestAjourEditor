@@ -102,7 +102,7 @@ iOS/Mac Catalyst Required:
 
 
 ```cs
-Windows Required:<br/>
+Windows Required:
 SDK-version 10.0.22621.0
 - No setup is required.
 ```
