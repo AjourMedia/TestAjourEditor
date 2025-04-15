@@ -1,4 +1,4 @@
-# ![Ajour Media](logo64.png)[^1] Maui Cross platform Editor-library<br/>for HTML, XML and RTF.
+# ![Ajour Media](logo64.png) Maui Cross platform Editor-library<br/>for HTML, XML and RTF.[^1]
 
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
