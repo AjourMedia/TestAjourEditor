@@ -22,7 +22,7 @@
 - [x] Klikk på Åpne **testfil2 med bilder.html** (v1.4.30)
 
 <!-- This content will not appear in the rendered Markdown -->
-[^1]
+<!-- [^1] -->
 [^1]: My reference.
 
 ```cs
