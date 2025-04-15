@@ -17,13 +17,9 @@
 5.a remove sample source
 6. Build and run
 
-### TODO:
+### TODO:[^1]
 - [x] Skriv noe tekst og klikk på **B**, **I** eller **U** (v1.4.21)
 - [x] Klikk på Åpne **testfil2 med bilder.html** (v1.4.30)
-
-<!-- This content will not appear in the rendered Markdown -->
-<!-- [^1] -->
-[^1]: My reference.
 
 ```cs
 using Microsoft.Extensions.Logging;
@@ -110,3 +106,5 @@ Windows Required:
 SDK-version 10.0.22621.0
 - No setup is required.
 ```
+
+[^1]: © 1991 - 2025 Ajour Media AS.
