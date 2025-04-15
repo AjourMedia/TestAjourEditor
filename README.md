@@ -3,7 +3,7 @@
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
 
-[![Build Status](Build)](/assets/images/ajour_logo.png)
+[![Build Status](Build)](/assets/ajour_logo.png)
 
 
 **TODO: TEST AJOUR EDITOR Library**
