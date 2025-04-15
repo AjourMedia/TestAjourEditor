@@ -3,18 +3,18 @@
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
 
-[![Build Status](Build)](1.4.29)
+[![Build Status](Build)](/assets/images/ajour_logo.png)
 
 
 **TODO: TEST AJOUR EDITOR Library**
 1. Create a new MAUI Application
 2. Add Nuget package [Ajour.EditorLib.1.4.xx.nupkg]()
 - copy to your offline packages folder, then add to your project.
-3. Open **MauiProgram.cs**
-3a. Add [using Ajour.EditorLib;]()
+3. Open **MauiProgram.cs**<br/>
+3a. Add [using Ajour.EditorLib;]()<br/>
 3b. Add [builder.UseAjourEditor();]()
-4. Open **MainPage.xaml**
-4a. Add [xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"]()
+4. Open **MainPage.xaml**<br/>
+4a. Add [xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"]()<br/>
 4b. Replace sample content with [<ajourlib:AjourEditor />]()
 5. Open **MainPage.xaml.cs**
 - remove sample source
@@ -65,3 +65,47 @@ namespace TestAjourEditor
 </ContentPage>
 ```
 
+
+```cs
+Android Required:
+
+C#
+[assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage, MaxSdkVersion = 32)]
+[assembly: UsesPermission(Android.Manifest.Permission.ReadMediaAudio)]
+[assembly: UsesPermission(Android.Manifest.Permission.ReadMediaImages)]
+[assembly: UsesPermission(Android.Manifest.Permission.ReadMediaVideo)]
+
+XML
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+<!-- Required only if your app needs to access images or photos that other apps created -->
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+<!-- Required only if your app needs to access videos that other apps created -->
+<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+<!-- Required only if your app needs to access audio files that other apps created -->
+<uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+```
+
+
+```cs
+iOS/Mac Catalyst Required:
+
+<key>com.apple.security.assets.movies.read-only</key>
+<true/>
+<key>com.apple.security.assets.music.read-only</key>
+<true/>
+<key>com.apple.security.assets.pictures.read-only</key>
+<true/>
+<key>com.apple.security.files.downloads.read-only</key>
+<true/>
+<key>com.apple.security.files.user-selected.read-only</key>
+<true/>
+<key>com.apple.security.personal-information.photos-library</key>
+<true/>
+```
+
+
+```cs
+Windows Required:<br/>
+SDK-version 10.0.22621.0
+- No setup is required.
+```
