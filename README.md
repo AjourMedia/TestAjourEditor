@@ -6,7 +6,7 @@
 ### PROJECT: TESTE **AJOUR EDITOR Library**
 1. Create a new MAUI Application
 2. Add Nuget package [Ajour.EditorLib.1.4.xx.nupkg]()<br/>
-- copy to your offline packages folder, then add to your project.
+2a. copy to your offline packages folder, then add to your project.
 3. Open **MauiProgram.cs**<br/>
 3a. Add [using Ajour.EditorLib;]()<br/>
 3b. Add [builder.UseAjourEditor();]()
@@ -14,7 +14,7 @@
 4a. Add [xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"]()<br/>
 4b. Replace sample content with [<ajourlib:AjourEditor />]()
 5. Open **MainPage.xaml.cs**<br/>
-- remove sample source
+5.a remove sample source
 6. Build and run
 
 ### TODO:
