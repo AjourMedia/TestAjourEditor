@@ -17,11 +17,9 @@
 - remove sample source
 6. Build and run
 
-**Todo1:**
-`Skriv noe tekst og klikk på B, I eller U`
-
-- [x] Skriv noe tekst og klikk på B, I eller U (1.4.21)
-- [x] Klikk på Åpne testfil2 med bilder.html (1.4.30)
+### TODO:
+- [x] Skriv noe tekst og klikk på **B**, **I** eller **U** (v1.4.21)
+- [x] Klikk på Åpne **testfil2 med bilder.html** (v1.4.30)
 
 
 ```cs
