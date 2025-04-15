@@ -3,7 +3,7 @@
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
 
-### PROJECT: TESTE **AJOUR EDITOR Library**
+### PROJECT: TESTE AJOUR EDITOR Library
 1. Create a new MAUI Application
 2. Add Nuget package [Ajour.EditorLib.1.4.xx.nupkg]()<br/>
 2a. copy to your offline packages folder, then add to your project.
@@ -20,6 +20,8 @@
 ### TODO:
 - [x] Skriv noe tekst og klikk på **B**, **I** eller **U** (v1.4.21)
 - [x] Klikk på Åpne **testfil2 med bilder.html** (v1.4.30)
+
+[^1]Copyright 1991 - 2025 Ajour Media AS.
 
 ```cs
 using Microsoft.Extensions.Logging;
@@ -106,5 +108,3 @@ Windows Required:
 SDK-version 10.0.22621.0
 - No setup is required.
 ```
-
-[^1]: © 1991 - 2025 Ajour Media AS.
