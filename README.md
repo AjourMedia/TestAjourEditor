@@ -22,6 +22,7 @@
 - [x] Klikk på Åpne **testfil2 med bilder.html** (v1.4.30)
 
 Here is a simple footnote[^1].
+[^1]: My reference.
 
 ```cs
 using Microsoft.Extensions.Logging;
