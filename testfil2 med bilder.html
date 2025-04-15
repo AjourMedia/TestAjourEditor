@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="no" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Morten Ellingsen, Ajour Media AS">
+    <style>
+        .prevent-select {
+            -webkit-user-select: text; /* Safari */
+            -ms-user-select: text; /* IE 10 and IE 11 */
+            user-select: text; /* Standard syntax */
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Regular.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MYRIADPRO-REGULAR.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Regular.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro Bold';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Bold.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MYRIADPRO-BOLD.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Bold.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro Italic';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-It.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-It.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-It.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro Light';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Light.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Light.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Light.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro Light Cond';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-LightCond.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-LightCond.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-LightCond.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        .htitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 600;
+            color: rgb(0,0,0);
+            font-size: 34px;
+            margin: 0px 0px 24px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .stitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: black;
+            font-size: 30px;
+            margin: 0px 0px 21px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .utitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: black;
+            font-size: 30px;
+            margin: 0px 0px 21px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .ingrs {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: rgb(0,0,0);
+            font-size: 24px;
+            margin: 0px 0px 17px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .init {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: black;
+            text-transform: uppercase;
+        }
+    </style>
+    <style type='text/css'>
+        .bte {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: black;
+            font-size: 22px;
+            margin: 0px 0px 31px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .bti {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: black;
+            text-transform: uppercase;
+        }
+    </style>
+    <style type='text/css'>
+        .bfo {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 400;
+            color: olive;
+            text-transform: uppercase;
+        }
+    </style>
+    <style type='text/css'>
+        .tekst {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: black;
+            font-size: 22px;
+            margin: 0px 0px 16px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .henv {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: black;
+            text-transform: uppercase;
+        }
+    </style>
+    <style type='text/css'>
+        .mtitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: rgb(0,0,0);
+            font-size: 22px;
+            margin: 16px 0px 0px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .byline {
+            font-family: 'Myriad Pro Light Cond';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(100,100,100);
+            font-size: 22px;
+            margin: 0px 0px 16px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .epost {
+            font-family: 'Myriad Pro Light Cond';
+            font-style: normal;
+            font-weight: 300;
+            color: blue;
+            text-decoration: underline;
+            font-size: 22px;
+            margin: 0px 0px 16px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .ntitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 24px;
+            margin: 0px 0px 17px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .ntekst {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 18px;
+            margin: 0px 0px 13px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .tabtit {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 18px;
+            margin: 0px 0px 13px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .tabres {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 16px;
+            line-height: 1.1;
+            padding: 0px;
+            border-collapse: collapse;
+            overflow: visible;
+            margin: 0px 0px 15px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .tabell {
+            font-family: 'Myriad Pro Light Cond';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 16px;
+            line-height: 1.1;
+            padding: 0px;
+            border-collapse: collapse;
+            overflow: visible;
+            margin: 0px 0px 15px 0px;
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Myriad Pro' !important;
+            font-size: 12px;
+            height: 100vh !important;
+            width: 100vw !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <style>
+        p {
+            margin: 0px 0px 0px 0px;
+            line-height: 1,4;
+        }
+    </style>
+    <style>
+        div {
+            word-wrap: break-word;
+        }
+    </style>
+    <style>
+        img {
+            height: Auto;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+    <style>
+        video {
+            height: Auto;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+    <style>
+        article {
+            padding: 12px 12px 12px 12px;
+        }
+    </style>
+</head>
+<body class="prevent-select">
+    <article>
+        <img src="https://hbapp.hblad.no/hblad/seksjoner/nyheter/content/090946476-IMG_9229.jpg" alt="090946476-IMG_9229" data-filename="090946476-IMG_9229.jpg" />
+        <p class="bte"><span class="bti">Risiko: </span>Risikoen anses for stor til å ta imot alle de indremedisinske pasientene fra Vefsn i Sandnessjøen, skrev adm. dir. Lena E. Nielsen i et notat sendt til Helse Nord-sjef Marit Lind 12. mars.</p>
+        <p class="htitt">Arealargumenter helt til det siste<br /></p>
+        <p class="ingrs"><u>Plassproblem:</u> Helt opp mot Helse Nords avgjørende styremøte 14. mars, gjentok adm. dir. Lena E. Nielsen argumentet om at det ikke er plass til de indremedisinske pasientene fra Vefsn i Sandnessjøen. Det viser eposter sendt mellom ledelsen i Helgelandssykehuset og Helse Nord.<br /></p>
+        <p class="byline">Leif Steinholt</p>
+        <p class="epost">lst@hblad.no   95038391</p>
+        <p class="tekst">
+            <span class="init">Et avgjørende møte</span><span class="init">. </span>14. mars hadde styret i Helse Nord et avgjørende møte om hvordan oppgavene i Helgelandssykehuset skal bli fordelt. <br />
+            I møtet ble det vedtatt at de indremedisinske pasientene fra Vefsn skal tilhøre opptaksområdet til sykehuset i Mo i Rana, sjøl om det er cirka tjue minutter kortere kjøretid til Sandnessjøen. Vedtaket har siden høstet kritikk og mange spørsmål, både fra sykehusansatte i Sandnessjøen, den politiske ledelsen i Alstahaug kommune og toppene i Senterpartiet.<br />
+        <p class="tekst">– Areal har fått uforholdsmessig stor oppmerksomhet etter møtet i Helse Nord, sa Helgelandssykehusets drifts- og eiendomsdirektør Bjørn Bech-Hanssen da en delegasjon fra Senterpartiet besøkte Sandnessjøen torsdag (se reportasje på neste side).</p>
+
+        Faktum er uansett at det i dagene opp mot 14. mars var mye kontakt mellom ledelsen i Helgelandssykehuset og Helse Nord der arealspørsmålet var tema – og med fokus på plassmangel i Sandnessjøen.<br />
+        <br />
+        <span class="init">Innsyn i eposter. </span>Opplysningene som forteller om kommunikasjonen mellom ledende personer i Helgelandssykehuset og Helse Nord, kommer fram i eposter og vedlegg som Helgelands Blad har fått innsyn i gjennom et innsynskrav rettet til det regionale helseforetaket.<br />
+        Så seint som 12. mars – to dager før Helse Nord-styremøtet – sendte Helgelandssykehusets saksbehandler Pål Madsen en epost til Helse Nords administrerende direktør Marit Lind der arealsituasjonen i Sandnessjøen var tema.<br />
+        «Hei, se vedlagte oppsummering. Ta kontakt ved behov», skriver Madsen i eposten. På kopilista står Helse Nords viseadministrerende direktør Ola Jøsendal, eierdirektør Hilde Rolandsen og kommunikasjonssjef Kim Hannisdal, samt Helgelandssykehusets adm. dir. Lena E. Nielsen.<br />
+        <p class="tekst"></p>
+
+        <span class="init">4. september-møtet.</span> I oppsummeringa sendt til Helse Nord-toppene 12. mars blir det vist til et møte på sykehuset i Sandnessjøen 4. september i fjor, der arealproblematikk var tema. «Det framkom en rekke udekkede arealbehov fra ulike avdelinger og enheter på sykehuset», blir det påpekt.<br />
+        <p class="tekst">To dager etterpå skal presentasjonen og referatet fra møtet 4. september veie tungt i eierdirektør Rolandsens orientering til styret i Helse Nord.</p>
+
+        På dette tidspunktet har tre enhetsledere ved sykehuset i Sandnessjøen stått fram i Helgelands Blad, og sagt at de opplever møtet tatt ut av kontekst og misbrukt. <br />
+        18. mars blir kritikken fulgt opp av et brev til adm. dir. Nielsen fra samtlige enhetsledere ved medisinsk og kirurgisk avdeling i Sandnessjøen, under tittelen «Tillitskrise». Her stiller de seg «fullstendig uforstående til at et møte 4. september blir brukt for å konkludere i en sak som har store konsekvenser for befolkningen på Helgeland».</p>
+
+        <img src="https://hbapp.hblad.no/hblad/seksjoner/nyheter/content/101732997-IMG_9070.jpg" alt="101732997-IMG_9070" data-filename="101732997-IMG_9070.jpg" />
+        <p class="bte"><span class="bti">Planforslag:</span> Avdelingsleder Rose Rølvåg (i midten) – her sammen med leder Hanne Charlotte Schjelderup i Jordmorforbundet – ledet an da helse- og omsorgsminister Jan Christian Vestre besøkte sykehuset i Sandnessjøen 8. november 2024. Rølvåg har stått bak et planforslag hun mener vil gi plass til de indremedisinske pasientene fra Vefsn. – Adresserer ikke arealutfordringene, kommenterer adm. dir. Lena E. Nielsen i et skriv sendt til Helse Nord-ledelsen 12. mars. <span class="bfo">begge foto: leif steinholt</span></p>
+    </article>
+</body>
+</html>
