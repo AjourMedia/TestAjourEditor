@@ -52,7 +52,9 @@ namespace TestAjourEditor
 }
 ```
 
-```cs
+[`Ajour.EditorLib`][3]
+[`ajourlib:AjourEditor`][3]
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -65,15 +67,15 @@ namespace TestAjourEditor
 ```
 
 
+**Android Required:**
 ```cs
-Android Required:
-
 C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage, MaxSdkVersion = 32)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaAudio)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaImages)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaVideo)]
-
+```
+```xml
 XML
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
 <!-- Required only if your app needs to access images or photos that other apps created -->
@@ -85,9 +87,8 @@ XML
 ```
 
 
-```cs
-iOS/Mac Catalyst Required:
-
+**iOS/Mac Catalyst Required:**
+```applescript
 <key>com.apple.security.assets.movies.read-only</key>
 <true/>
 <key>com.apple.security.assets.music.read-only</key>
@@ -103,8 +104,8 @@ iOS/Mac Catalyst Required:
 ```
 
 
-```cs
-Windows Required:
+**Windows Required:**
+```
 SDK-version 10.0.22621.0
 - No setup is required.
 ```
