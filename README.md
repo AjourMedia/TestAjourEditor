@@ -39,11 +39,11 @@ namespace TestAjourEditor
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-				})
-				.UseAjourEditor();
+                })
+                .UseAjourEditor();
 
             #if DEBUG
-			builder.Logging.AddDebug();
+builder.Logging.AddDebug();
             #endif
 
             return builder.Build();
@@ -52,23 +52,23 @@ namespace TestAjourEditor
 }
 ```
 
-[`Ajour.EditorLib`][3]
-[`ajourlib:AjourEditor`][3]
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TestAjourEditor.MainPage"
-			 xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"
-			 >
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TestAjourEditor.MainPage"
+	xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"
+	>
 	<!-- Editor -->
 	<ajourlib:AjourEditor />
 </ContentPage>
 ```
 
 
+
 **Android Required:**
-```cs
+```x86asm
 C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage, MaxSdkVersion = 32)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaAudio)]
@@ -87,6 +87,7 @@ XML
 ```
 
 
+
 **iOS/Mac Catalyst Required:**
 ```applescript
 <key>com.apple.security.assets.movies.read-only</key>
@@ -102,6 +103,7 @@ XML
 <key>com.apple.security.personal-information.photos-library</key>
 <true/>
 ```
+
 
 
 **Windows Required:**
