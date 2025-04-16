@@ -43,7 +43,7 @@ namespace TestAjourEditor
                 .UseAjourEditor();
 
             #if DEBUG
-builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
             #endif
 
             return builder.Build();
@@ -58,17 +58,17 @@ builder.Logging.AddDebug();
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TestAjourEditor.MainPage"
-	xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"
-	>
-	<!-- Editor -->
-	<ajourlib:AjourEditor />
+    xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"
+    >
+    <!-- Editor -->
+    <ajourlib:AjourEditor />
 </ContentPage>
 ```
 
 
 
 **Android Required:**
-```x86asm
+```js
 C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage, MaxSdkVersion = 32)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaAudio)]
