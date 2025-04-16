@@ -58,7 +58,7 @@ namespace TestAjourEditor
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TestAjourEditor.MainPage"
-    xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"
+    <ins>xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"</ins>
     >
     <!-- Editor -->
     <ajourlib:AjourEditor />
