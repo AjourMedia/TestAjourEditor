@@ -19,7 +19,7 @@
 
 ### TODO:
 - [x] Skriv noe tekst og klikk på **B**, **I** eller **U** (v1.4.21)
-- [x] Klikk på Åpne **testfil2 med bilder.html** (v1.4.30)
+- [x] Klikk på Åpne **testfil2 med bilder**.html (v1.4.30)
 
 [^1]: Copyright © 1991 - 2025 Ajour Media AS.
 
