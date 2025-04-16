@@ -74,7 +74,7 @@ C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaImages)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaVideo)]
 ```
-```css
+```js
 XML
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
 <!-- Required only if your app needs to access images or photos that other apps created -->
@@ -87,7 +87,7 @@ XML
 
 
 **iOS/Mac Catalyst Required:**
-```css
+```curl
 <key>com.apple.security.assets.movies.read-only</key>
 <true/>
 <key>com.apple.security.assets.music.read-only</key>
