@@ -65,8 +65,8 @@ namespace TestAjourEditor
 </ContentPage>
 ```
 
+
 **Android Required:**
-option1: AndroidManifest.xml
 ```js
 C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage, MaxSdkVersion = 32)]
@@ -74,8 +74,7 @@ C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaImages)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaVideo)]
 ```
-option2: MainActivity.cs
-```js
+```typescript
 XML
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
 <!-- Required only if your app needs to access images or photos that other apps created -->
@@ -86,8 +85,9 @@ XML
 <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 ```
 
+
 **iOS/Mac Catalyst Required:**
-```applescript
+```typescript
 <key>com.apple.security.assets.movies.read-only</key>
 <true/>
 <key>com.apple.security.assets.music.read-only</key>
@@ -101,6 +101,7 @@ XML
 <key>com.apple.security.personal-information.photos-library</key>
 <true/>
 ```
+
 
 **Windows Required:**
 ```
