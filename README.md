@@ -52,7 +52,7 @@ namespace TestAjourEditor
 }
 ```
 
-```xml
+```xhtml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -74,7 +74,7 @@ C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaImages)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadMediaVideo)]
 ```
-```js
+```xhtml
 XML
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
 <!-- Required only if your app needs to access images or photos that other apps created -->
@@ -87,7 +87,7 @@ XML
 
 
 **iOS/Mac Catalyst Required:**
-```curl
+```plist
 <key>com.apple.security.assets.movies.read-only</key>
 <true/>
 <key>com.apple.security.assets.music.read-only</key>
