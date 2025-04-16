@@ -58,7 +58,7 @@ namespace TestAjourEditor
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TestAjourEditor.MainPage"
-    xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"
+    `xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"`
     >
     <!-- Editor -->
     <ajourlib:AjourEditor />
@@ -66,7 +66,7 @@ namespace TestAjourEditor
 ```
 
 
-**Android Required:**
+**> Android Required:**
 ```js
 C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage, MaxSdkVersion = 32)]
@@ -86,7 +86,7 @@ XML
 ```
 
 
-**iOS/Mac Catalyst Required:**
+**> iOS/Mac Catalyst Required:**
 ```plist
 <key>com.apple.security.assets.movies.read-only</key>
 <true/>
@@ -103,7 +103,7 @@ XML
 ```
 
 
-**Windows Required:**
+**> Windows Required:**
 ```
 SDK-version 10.0.22621.0
 - No setup is required.
