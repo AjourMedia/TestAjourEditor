@@ -2,7 +2,7 @@
 
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
-#### This is a very early phase of a project that is planned to run throughout 2025. Input and ideas will be gratefully received.
+#### NB! This is a very early phase of a project that is planned to run throughout 2025. Input and ideas will be gratefully received.
 
 
 ### PROJECT: TESTE AJOUR EDITOR Library
