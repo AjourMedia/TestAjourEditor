@@ -17,6 +17,8 @@
 5.a remove sample source
 6. Build and run
 
+![Printscreen](android.png)
+
 ### TODO:
 - [x] Tekststiler: Skriv noe tekst og klikk på **B**, **I** eller **U** (v1.4.21)
 - [x] Klikk på Åpne **testfil2 med bilder**.html (v1.4.30)
