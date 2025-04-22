@@ -18,8 +18,17 @@
 6. Build and run
 
 ### TODO:
-- [x] Skriv noe tekst og klikk på **B**, **I** eller **U** (v1.4.21)
+- [x] Tekststiler: Skriv noe tekst og klikk på **B**, **I** eller **U** (v1.4.21)
 - [x] Klikk på Åpne **testfil2 med bilder**.html (v1.4.30)
+
+**Oppgave 1:** 
+- Åpne en html side i editoren som redigerbart dokument.
+- Lagre dokumentet til din lokale hardisk som **html** eller **rtf** filformat.
+
+- **Oppgave 2:** 
+- Laste inn en webside fra din web browser. **Marker** innholdet du er interessert i og **kopier** dette til klippbordet.
+- Klikk på **Lim inn** knappen i editoren for å **redigere innholdet** fra websiden som et **redigerbart dokument**.
+- Dokumentet er nå helt fristillet fra websiden du kopierte fra. Du kan redigere slik du ønsker og lagre resultatet til din lokale hardisk som **html** eller **rtf** filformat.
 
 [^1]: Copyright © 1991 - 2025 Ajour Media AS.
 
@@ -58,7 +67,7 @@ namespace TestAjourEditor
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TestAjourEditor.MainPage"
-    `xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"`
+    xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"
     >
     <!-- Editor -->
     <ajourlib:AjourEditor />
@@ -66,7 +75,7 @@ namespace TestAjourEditor
 ```
 
 
-**> Android Required:**
+**Android Required:**
 ```js
 C#
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage, MaxSdkVersion = 32)]
@@ -86,7 +95,7 @@ XML
 ```
 
 
-**> iOS/Mac Catalyst Required:**
+**iOS/Mac Catalyst Required:**
 ```plist
 <key>com.apple.security.assets.movies.read-only</key>
 <true/>
@@ -103,7 +112,7 @@ XML
 ```
 
 
-**> Windows Required:**
+**Windows Required:**
 ```
 SDK-version 10.0.22621.0
 - No setup is required.
