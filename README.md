@@ -20,17 +20,17 @@
 ![Printscreen](android.png)
 
 ### TODO:
-- [x] Tekststiler: Skriv noe tekst og klikk på **B**, **I** eller **U** (v1.4.21)
-- [x] Klikk på Åpne **testfil2 med bilder**.html (v1.4.30)
+- [x] Text Styles: Type some text and click **B**, **I** eller **U** (v1.4.21)
+- [x] Click the Open File button **testfil2 med bilder**.html (v1.4.30)
 
-**Oppgave 1:** 
-- Åpne en html side i editoren som redigerbart dokument.
-- Lagre dokumentet til din lokale hardisk som **html** eller **rtf** filformat.
+**Task 1:** 
+- Open an html page in the editor as an editable document.
+- Save the document to your local hard drive as **html** or **rtf** file format.
 
-**Oppgave 2:** 
-- Laste inn en webside fra din web browser. **Marker** innholdet du er interessert i og **kopier** dette til klippbordet.
-- Klikk på **Lim inn** knappen i editoren for å **redigere innholdet** fra websiden som et **redigerbart dokument**.
-- Dokumentet er nå helt fristillet fra websiden du kopierte fra. Du kan redigere slik du ønsker og lagre resultatet til din lokale hardisk som **html** eller **rtf** filformat.
+**Task 2:** 
+- Load a web page from your web browser. **Highlight** the content you are interested in and **copy** it to the clipboard.
+- Click the **Paste** button in the editor to **edit the content** from the web page as an **editable document**.
+- The document is now completely independent of the web page you copied it from. You can edit it as you wish and save the result to your local hard drive as **html** or **rtf** file format.
 
 [^1]: Copyright © 1991 - 2025 Ajour Media AS.
 
