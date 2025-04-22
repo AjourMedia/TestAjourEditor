@@ -25,7 +25,7 @@
 - Åpne en html side i editoren som redigerbart dokument.
 - Lagre dokumentet til din lokale hardisk som **html** eller **rtf** filformat.
 
-- **Oppgave 2:** 
+**Oppgave 2:** 
 - Laste inn en webside fra din web browser. **Marker** innholdet du er interessert i og **kopier** dette til klippbordet.
 - Klikk på **Lim inn** knappen i editoren for å **redigere innholdet** fra websiden som et **redigerbart dokument**.
 - Dokumentet er nå helt fristillet fra websiden du kopierte fra. Du kan redigere slik du ønsker og lagre resultatet til din lokale hardisk som **html** eller **rtf** filformat.
