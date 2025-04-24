@@ -60,6 +60,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiAsset Remove="Resources\Raw\Ajour.EditorLib.1.4.34.nupkg" />
+	  <MauiAsset Remove="Resources\Raw\testfil1.html" />
+	  <MauiAsset Remove="Resources\Raw\testfil1.rtf" />
+	  <MauiAsset Remove="Resources\Raw\testfile2 with photo.html" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Ajour.EditorLib" Version="1.4.34" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="11.2.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.60" />
