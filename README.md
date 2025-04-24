@@ -22,7 +22,7 @@
 ![Printscreen](android.png)
 
 ### TODO:
-- [x] Open .rtf from WinOS, iOS, MacOS  (v1.4.36)
+- [x] Open .rtf files from Windows, iOS and MacOS  (v1.4.36)
 - [x] Click the Open File button **testfil2 med bilder**.html (v1.4.30)
 - [x] Text Styles: Type some text and click **B**, **I** eller **U** (v1.4.21)
 
