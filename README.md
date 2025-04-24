@@ -126,7 +126,7 @@ SDK-version 10.0.22621.0
 - No setup is required.
 ```
 
-**Optional MacCatalyst and Windows**
+**Optional: MacCatalyst and Windows**
 ```cs
 protected override Window CreateWindow(IActivationState? activationState)
 {
