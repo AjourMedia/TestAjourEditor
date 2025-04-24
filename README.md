@@ -22,8 +22,9 @@
 ![Printscreen](android.png)
 
 ### TODO:
-- [x] Text Styles: Type some text and click **B**, **I** eller **U** (v1.4.21)
+- [x] Open .rtf files from Windows App (v1.4.33)
 - [x] Click the Open File button **testfil2 med bilder**.html (v1.4.30)
+- [x] Text Styles: Type some text and click **B**, **I** eller **U** (v1.4.21)
 
 **Task 1:** 
 - Open an html page in the editor as an editable document.
@@ -38,6 +39,7 @@
 
 ```cs
 using Microsoft.Extensions.Logging;
+using CommunityToolkit.Maui;
 using Ajour.EditorLib;
 namespace TestAjourEditor
 {
@@ -48,6 +50,7 @@ namespace TestAjourEditor
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -90,6 +93,7 @@ C#
 ```xhtml
 XML
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <!-- Required only if your app needs to access images or photos that other apps created -->
 <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 <!-- Required only if your app needs to access videos that other apps created -->
@@ -109,7 +113,7 @@ XML
 <true/>
 <key>com.apple.security.files.downloads.read-only</key>
 <true/>
-<key>com.apple.security.files.user-selected.read-only</key>
+<key>com.apple.security.files.user-selected.read-write</key>
 <true/>
 <key>com.apple.security.personal-information.photos-library</key>
 <true/>
