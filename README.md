@@ -19,9 +19,10 @@
 5.a remove sample source
 6. Build and run
 
-![Printscreen](android.png)
+![Printscreen](editor.png)
 
 ### TODO:
+- [x] **Save As RTF** fileformat from Windows, iOS and MacOS. (Limited to one style template).
 - [x] Open .rtf files from Windows, iOS and MacOS  (v1.4.36)
 - [x] Click the Open File button **testfil2 med bilder**.html (v1.4.30)
 - [x] Text Styles: Type some text and click **B**, **I** eller **U** (v1.4.21)
@@ -93,7 +94,7 @@ C#
 ```xhtml
 XML
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="34" />
 <!-- Required only if your app needs to access images or photos that other apps created -->
 <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 <!-- Required only if your app needs to access videos that other apps created -->
@@ -105,6 +106,7 @@ XML
 
 **iOS/Mac Catalyst Required:**
 ```plist
+Info.plist
 <key>com.apple.security.assets.movies.read-only</key>
 <true/>
 <key>com.apple.security.assets.music.read-only</key>
@@ -113,9 +115,15 @@ XML
 <true/>
 <key>com.apple.security.files.downloads.read-only</key>
 <true/>
-<key>com.apple.security.files.user-selected.read-write</key>
-<true/>
 <key>com.apple.security.personal-information.photos-library</key>
+<true/>
+```
+
+
+**Mac Catalyst Required:**
+```plist
+Entitlements.plist
+<key>com.apple.security.files.user-selected.read-write</key>
 <true/>
 ```
 
