@@ -144,7 +144,7 @@ public App(DesktopWindow appTitleWindow)
 protected override Window CreateWindow(IActivationState? activationState)
 {
 	if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
-		DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
+	    DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
 	{
 		Window window = AppTitleWindow;
 		window.Page = new AppTabbed();
@@ -187,7 +187,7 @@ protected override Window CreateWindow(IActivationState? activationState)
 	}
 	else
 	{
-		return new Window(new AppShell());
+	    return new Window(new AppShell());
 	}
 }
 ```
