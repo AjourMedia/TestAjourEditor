@@ -23,6 +23,8 @@ namespace TestAjourEditor
 			builder.Logging.AddDebug();
             #endif
 
+            builder.Services.AddSingleton<DesktopWindow>();
+
             return builder.Build();
         }
     }

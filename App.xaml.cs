@@ -2,21 +2,28 @@
 {
     public partial class App : Application
     {
-        public App()
+		public DesktopWindow AppTitleWindow
+		{
+			get;
+		}
+
+		public App(DesktopWindow appTitleWindow)
         {
             InitializeComponent();
-        }
+			AppTitleWindow = appTitleWindow;
+		}
 
 		protected override Window CreateWindow(IActivationState? activationState)
 		{
-			Window window = new Window(new AppShell());
-			window.Activated += (sender, args) =>
+			if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
+				DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
 			{
-				Window? window = sender as Window;
-				if (window != null)
+				Window window = AppTitleWindow;
+				window.Page = new AppTabbed();
+				window.Created += (sender, args) =>
 				{
-					if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
-					DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
+					Window? window = sender as Window;
+					if (window != null)
 					{
 						string? position = Microsoft.Maui.Storage.Preferences.Get("Position", null);
 						if (position != null)
@@ -34,15 +41,11 @@
 							}
 						}
 					}
-				}
-			};
-			window.Destroying += (sender, args) =>
-			{
-				Window? window = sender as Window;
-				if (window != null)
+				};
+				window.Destroying += (sender, args) =>
 				{
-					if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
-						DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
+					Window? window = sender as Window;
+					if (window != null)
 					{
 						string position = String.Format("{0};{1};{2};{3}",
 							Convert.ToInt32(window.X),
@@ -51,9 +54,13 @@
 							Convert.ToInt32(window.Height));
 						Microsoft.Maui.Storage.Preferences.Set("Position", position);
 					}
-				}
-			};
-			return window;
+				};
+				return window;
+			}
+			else
+			{
+				return new Window(new AppShell());
+			}
 		}
 	}
 }
