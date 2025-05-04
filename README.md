@@ -23,6 +23,9 @@
 
 ![Printscreen](editor.png)
 
+![Printscreen](mobile.png)
+
+
 ### TODO:
 - [x] **Save As RTF** fileformat from Windows, iOS and MacOS. (Limited to one style template).
 - [x] Open .rtf files from Windows, iOS and MacOS  (v1.4.36)
