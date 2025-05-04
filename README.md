@@ -133,21 +133,37 @@ SDK-version 10.0.22621.0
 
 **Optional: MacCatalyst and Windows**
 ```cs
-public DesktopWindow AppTitleWindow { get; }
-		
-public App(DesktopWindow appTitleWindow)
+#if MACCATALYST
+builder.Services.AddSingleton<AppTitleCatalyst>();
+#endif
+#if WINDOWS10_0_22621_0_OR_GREATER
+builder.Services.AddSingleton<AppTitleWinUI>();
+#endif
+builder.Services.AddSingleton<ReporterPage, ReporterViewModel>();
+
+private readonly IServiceProvider? services;
+public App(IServiceProvider services)
 {
     InitializeComponent();
-    AppTitleWindow = appTitleWindow;
+	this.services = services.GetService<IServiceProvider>();
 }
 
 protected override Window CreateWindow(IActivationState? activationState)
 {
 	if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
-	    DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
+		DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
 	{
-		Window window = AppTitleWindow;
-		window.Page = new AppTabbed();
+		Window? window = null;
+		if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
+		{
+			window = services?.GetService<AppTitleWinUI>()!;
+			window.Page = new StartupWinUI();
+		}
+		else
+		{
+			window = services?.GetService<AppTitleCatalyst>()!;
+			window.Page = new StartupCatalyst();
+		}
 		window.Created += (sender, args) =>
 		{
 			Window? window = sender as Window;
@@ -187,7 +203,7 @@ protected override Window CreateWindow(IActivationState? activationState)
 	}
 	else
 	{
-	    return new Window(new AppShell());
+		return new Window(new StartupMobile());
 	}
 }
 ```
