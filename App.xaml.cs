@@ -2,15 +2,12 @@
 {
     public partial class App : Application
     {
-		public DesktopWindow AppTitleWindow
-		{
-			get;
-		}
+		private readonly IServiceProvider? services;
 
-		public App(DesktopWindow appTitleWindow)
+		public App(IServiceProvider services)
         {
             InitializeComponent();
-			AppTitleWindow = appTitleWindow;
+			this.services = services.GetService<IServiceProvider>();
 		}
 
 		protected override Window CreateWindow(IActivationState? activationState)
@@ -18,8 +15,17 @@
 			if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
 				DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
 			{
-				Window window = AppTitleWindow;
-				window.Page = new AppTabbed();
+				Window? window = null;
+				if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
+				{
+					window = services?.GetService<AppTitleWinUI>()!;
+					window.Page = new StartupWinUI();
+				}
+				else
+				{
+					window = services?.GetService<AppTitleCatalyst>()!;
+					window.Page = new StartupCatalyst();
+				}
 				window.Created += (sender, args) =>
 				{
 					Window? window = sender as Window;
@@ -59,7 +65,7 @@
 			}
 			else
 			{
-				return new Window(new AppShell());
+				return new Window(new StartupMobile());
 			}
 		}
 	}

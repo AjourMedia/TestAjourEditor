@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using Ajour.EditorLib;
+using TestAjourEditor.Views;
 
 namespace TestAjourEditor
 {
@@ -23,7 +24,12 @@ namespace TestAjourEditor
 			builder.Logging.AddDebug();
             #endif
 
-            builder.Services.AddSingleton<DesktopWindow>();
+			#if MACCATALYST
+			builder.Services.AddSingleton<AppTitleCatalyst>();
+			#endif
+			#if WINDOWS10_0_22621_0_OR_GREATER
+			builder.Services.AddSingleton<AppTitleWinUI>();
+			#endif
 
             return builder.Build();
         }

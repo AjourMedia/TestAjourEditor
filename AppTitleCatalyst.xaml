@@ -2,22 +2,24 @@
 <Window 
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="TestAjourEditor.DesktopWindow"
+    x:Class="TestAjourEditor.AppTitleCatalyst"
 	>
 	<Window.TitleBar>
 		<TitleBar HeightRequest="48">
+			<!--
 			<TitleBar.Content>
 				<SearchBar WidthRequest="160" />
 			</TitleBar.Content>
+			-->
 			<TitleBar.LeadingContent>
 				<HorizontalStackLayout VerticalOptions="Center">
-					<Image Source="app.ico" WidthRequest="32" HeightRequest="32" Margin="12,0,0,0" />
-					<Label Text="Cross-platform editor" TextColor="Blue" FontSize="16" Margin="12,6,0,0" />
+					<Image Source="ajour_logo.png" WidthRequest="32" HeightRequest="32" Margin="12,0,0,0" />
+					<Label Text="Editorial Desk" TextColor="DarkBlue" FontSize="18" Margin="8,0,0,0" VerticalTextAlignment="Center" />
 				</HorizontalStackLayout>
 			</TitleBar.LeadingContent>
 			<TitleBar.TrailingContent>
 				<HorizontalStackLayout VerticalOptions="Center">
-					<Label Text="Ajour Media AS" TextColor="Gray" />
+					<Label Text="Ajour Media AS" FontSize="16" TextColor="Gray" Padding="0,0,30,0" />
 				</HorizontalStackLayout>
 			</TitleBar.TrailingContent>
 		</TitleBar>

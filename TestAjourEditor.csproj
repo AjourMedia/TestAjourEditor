@@ -61,10 +61,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="app.ico" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Ajour.EditorLib" Version="1.4.41" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="11.2.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.60" />
