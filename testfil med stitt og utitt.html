@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="no" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Morten Ellingsen, Ajour Media AS">
+    <style>
+        .prevent-select {
+            -webkit-user-select: text; /* Safari */
+            -ms-user-select: text; /* IE 10 and IE 11 */
+            user-select: text; /* Standard syntax */
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Regular.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MYRIADPRO-REGULAR.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Regular.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro Bold';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Bold.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MYRIADPRO-BOLD.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Bold.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro Italic';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-It.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-It.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-It.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro Light';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Light.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Light.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-Light.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'Myriad Pro Light Cond';
+            src: url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-LightCond.otf') format('opentype'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-LightCond.woff') format('woff'), url('https://hbapp.hblad.no/hblad/fonts/MyriadPro-LightCond.ttf') format('truetype');
+        }
+    </style>
+    <style type='text/css'>
+        .htitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 600;
+            color: rgb(0,0,0);
+            font-size: 34px;
+            margin: 0px 0px 24px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .stitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: black;
+            font-size: 30px;
+            margin: 0px 0px 21px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .utitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: black;
+            font-size: 30px;
+            margin: 0px 0px 21px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .ingrs {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: rgb(0,0,0);
+            font-size: 24px;
+            margin: 0px 0px 17px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .init {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: black;
+            text-transform: uppercase;
+        }
+    </style>
+    <style type='text/css'>
+        .bte {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: black;
+            font-size: 22px;
+            margin: 0px 0px 31px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .bti {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: black;
+            text-transform: uppercase;
+        }
+    </style>
+    <style type='text/css'>
+        .bfo {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 400;
+            color: olive;
+            text-transform: uppercase;
+        }
+    </style>
+    <style type='text/css'>
+        .tekst {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: black;
+            font-size: 22px;
+            margin: 0px 0px 16px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .henv {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: black;
+            text-transform: uppercase;
+        }
+    </style>
+    <style type='text/css'>
+        .mtitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 400;
+            color: rgb(0,0,0);
+            font-size: 22px;
+            margin: 16px 0px 0px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .byline {
+            font-family: 'Myriad Pro Light Cond';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(100,100,100);
+            font-size: 22px;
+            margin: 0px 0px 16px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .epost {
+            font-family: 'Myriad Pro Light Cond';
+            font-style: normal;
+            font-weight: 300;
+            color: blue;
+            text-decoration: underline;
+            font-size: 22px;
+            margin: 0px 0px 16px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .ntitt {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 24px;
+            margin: 0px 0px 17px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .ntekst {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 18px;
+            margin: 0px 0px 13px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .tabtit {
+            font-family: 'Myriad Pro';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 18px;
+            margin: 0px 0px 13px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .tabres {
+            font-family: 'Myriad Pro Light';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 16px;
+            line-height: 1.1;
+            padding: 0px;
+            border-collapse: collapse;
+            overflow: visible;
+            margin: 0px 0px 15px 0px;
+        }
+    </style>
+    <style type='text/css'>
+        .tabell {
+            font-family: 'Myriad Pro Light Cond';
+            font-style: normal;
+            font-weight: 300;
+            color: rgb(0,0,0);
+            font-size: 16px;
+            line-height: 1.1;
+            padding: 0px;
+            border-collapse: collapse;
+            overflow: visible;
+            margin: 0px 0px 15px 0px;
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Myriad Pro' !important;
+            font-size: 12px;
+            height: 100vh !important;
+            width: 100vw !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <style>
+        p {
+            margin: 0px 0px 0px 0px;
+            line-height: 1,4;
+        }
+    </style>
+    <style>
+        div {
+            word-wrap: break-word;
+        }
+    </style>
+    <style>
+        img {
+            height: Auto;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+    <style>
+        video {
+            height: Auto;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+    <style>
+        article {
+            padding: 12px 12px 12px 12px;
+        }
+    </style>
+</head>
+<body class="prevent-select">
+    <article>
+        <img src="https://hbapp.hblad.no/hblad/seksjoner/nyheter/content/318144-_P7A4343_0041.jpg" alt="318144-_P7A4343_0041" data-filename="318144-_P7A4343_0041.jpg" />
+        <p class="bte"><span class="bti">H</span><span class="bti">vilket sykehus?</span><span class="bti">: </span>Ambulansearbeiderne blir satt i en stor skvis når de indremedisinske pasientene fra Vefsn skal tilhøre Mo i Ranas opptaksområde, samtidig som det er kortest veg til Sandnessjøen, fastslår hovedtillitsvalgt Nils Petter Sandmo. <span class="bfo">foto: therese jægtvik</span></p>
+        <p class="stitt">Ambulansearbeidere redd for å kjøre til «feil» sykehus<br /></p>
+        <p class="htitt">– Blir satt i stor skvis<br /></p>
+        <p class="utitt">Tjue minutter kortere tid enn til Mo<br /></p>
+        <p class="ingrs"><span class="init">Vefsn til Mo</span><span class="init">:</span> Ambulansearbeidere er redd for å kjøre til «feil» sykehus når de indremedisinske pasientene fra Vefsn skal sokne til Mo i Rana – ikke Sandnessjøen. Nå skal pasienttransporten bli risikoanalysert.<br /></p>
+        <p class="byline">Leif Steinholt</p>
+        <p class="epost">lst@hblad.no   95038391</p>
+        <p class="tekst">
+            – Vi blir satt i en stor skvis.<br />
+            Det sier Nils Petter Sandmo, hovedtillitsvalgt fra Fagforbundet for Helgelandssykehusets prehospitale funksjoner i Vefsn, Hattfjelldal og Grane, og ambulansearbeider i Mosjøen.<br />
+            – Nå frykter vi å bli gjort personlig ansvarlig dersom noe går galt, sier han til Helgelands Blad.<br />
+        </p>
+        <p class="mtitt">Tjue minutter mer</p>
+        <p class="tekst">
+            Skvisen og frykten Sandmo snakker om, henger sammen med Helse Nord-styrets vedtak som slår fast at de indremedisinske pasientene i Vefsn skal sokne til sykehuset i Mo i Rana, ikke til sykehuset i Sandnessjøen. Etter planen skal dette være operativt fra 1. september.<br />
+            Til Sandnessjøen tar kjøreturen cirka tjue minutter kortere tid enn til Mo.<br />
+            Ambulansearbeiderne som bemanner ambulansen vil ofte være de som er først framme hos en pasient. Der må de avgjøre hvor de skal kjøre. <br />
+            Hva da hvis de tjue ekstra minuttene til Mo innebærer risiko for at det går dårligere med pasienten enn det kunne ha gjort? Og at de <i>faktisk</i> fører til at det går dårlig?<br />
+        </p>
+        <p class="mtitt">For seint å snu</p>
+        <p class="tekst">
+            Nils Petter Sandmo beskriver et tenkt – men høyst mulig – tilfelle slik:<br />
+            – Vi har en pasient i bilen som trenger akutt behandling, og kjører mot Mo i Rana, sånn som løypa er. Underveis blir pasienten dårligere, og vi skjønner at vi egentlig burde ha kjørt mot Sandnessjøen. Men da er det for seint å snu. <br />
+            Hvis pasienten får forverret helsetilstand, eller i verste fall dør, ser Sandmo for seg at Statsforvalteren åpner tilsynssak. Der vil ambulansearbeidernes vurderinger bli sett nærmere på.<br />
+            – Her kan vi bli overprøvd, bli stilt ansvarlig for valget vi gjorde og spikret opp på veggen, sier han.<br />
+        </p>
+        <p class="mtitt">Uklarhet i forskrift</p>
+        <p class="tekst">
+            Sandmos frykt har også sammenheng med uklarhet i tolkninga av akuttmedisinforskriften, eller Forskrift om krav til og organisering av kommunal legevaktordning, ambulansetjeneste, medisinsk nødmeldetjeneste mv., som det fulle navnet lyder.<br />
+            Forskriften har lenge blitt oppfattet dithen at ambulansen skal kjøre til nærmeste sykehus. <br />
+            Paragraf 10c sier det imidlertid ikke så definitivt. Her står det at helseforetakene har ansvar for å «bringe syke eller skadde pasienter med behov for overvåking og/eller behandling til forsvarlig behandlingssted og mellom behandlingssteder».<br />
+            – Det ene slår det andre i hjel, sier han.<br />
+        </p>
+        <p class="mtitt">Ett sykehus</p>
+        <p class="tekst">
+            Ifølge Sandmo har ambulansearbeiderne i Helgelandssykehuset bedt foretakets jurister om å komme med ei juridisk avklaring som gjelder deres ansvar i tilfellene hvor de må velge mellom sykehus.<br />
+            – Jeg synes svarene vi har fått til nå er for dårlige. Det er en kinkig situasjon, sier han.<br />
+            <i>– Hvilket sykehus mener</i><i> du bør være utgangspunkt når dere skal kjøre </i><i>
+                fra Mosjøen?<br />
+            </i>– La oss få ett sykehus å kjøre til, svarer Nils Petter Sandmo.<br />
+        </p>
+        <p class="mtitt">Skal lage ROS-analyse</p>
+        <p class="tekst">
+            – Vi kan ikke legge opp til pasientsløyfer som blir uforsvarlige. Det kan være pasienter som ikke blir kjørt dit de «skal».<br />
+            Det sier Jørgen Nilsen, prehospital klinikksjef i Helgelandssykehuset, om ambulansetransporten som i utgangspunktet skal til Mo i Rana – men som kan komme til å kjøre til Sandnessjøen.<br />
+            Nilsen har forståelse for at ambulansearbeiderne opplever det som vanskelig å bli stilt overfor et valg om hvilket sykehus de skal kjøre til.<br />
+            – Utgangspunktet er at pasienten skal til nærmeste forsvarlige behandlingssted. Nå skal vi gjennomføre en ROS-analyse og utarbeide og revidere egne prosedyrer som ser nærmere på dette, sier han.<br />
+        </p>
+        <p class="mtitt">Bestilling fra Helse Nord</p>
+        <p class="tekst">
+            Risiko- og sårbarhetsanalysen skal være gjennomført i løpet av mai. Her er Nilsen spesielt opptatt av å få engasjert kommuneoverlegene i Vefsn, Hattfjelldal og Grane, som kjenner pasientene i disse kommunene, i tillegg til Helgelandssykehusets egne ansatte.<br />
+            <i>
+                – Burde ikke en slik analyse vært gjennomført før vedtaket om å sende de indremedisinske pasientene i Vefsn til Mo i Rana?<br />
+            </i>– Vi har fått ei bestilling fra Helse Nord, og forholder oss til dét. Spørsmålet har også blitt utredet tidligere. Gjennom ROS-analysen vil vi se nærmere på prosedyrene, og hvordan vi skal ivareta pasientene på best mulig måte, svarer Jørgen Nilsen.
+        </p>
+
+        <img src="https://hbapp.hblad.no/hblad/seksjoner/nyheter/content/130524418-IMG_8156.jpg" alt="130524418-IMG_8156" data-filename="130524418-IMG_8156.jpg" />
+        <p class="bte"><span class="bti">Risikoanalyse:</span> Helgelandssykehuset skal gjennomføre en risiko- og sårbarhetsanalyse som omfatter de indremedisinske pasientene fra Vefsn som skal til Mo i Rana, opplyser prehospital klinikksjef Jørgen Nilsen. <span class="bfo">foto: leif steinholt</span></p>
+    </article>
+</body>
+</html>
