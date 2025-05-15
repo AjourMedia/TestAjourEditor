@@ -9,6 +9,12 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+
+			<Color x:Key="editor_background">#C8C8C8</Color>
+			<Color x:Key="editor_background_dark">#ACACAC</Color>
+			<Color x:Key="editor_background_selected">#E1E1E1</Color>
+			<Color x:Key="editor_forground">#141414</Color>
+			<Color x:Key="Greenish">#339933</Color>
+		</ResourceDictionary>
     </Application.Resources>
 </Application>

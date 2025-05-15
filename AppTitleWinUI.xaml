@@ -3,25 +3,18 @@
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TestAjourEditor.AppTitleWinUI"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	>
 	<Window.TitleBar>
-		<TitleBar HeightRequest="48">
-			<!--
-			<TitleBar.Content>
-				<SearchBar WidthRequest="160" />
-			</TitleBar.Content>
-			-->
+		<TitleBar HeightRequest="32" BackgroundColor="{StaticResource editor_background}">
 			<TitleBar.LeadingContent>
 				<HorizontalStackLayout VerticalOptions="Center">
-					<Image Source="ajour_logo.png" WidthRequest="32" HeightRequest="32" Margin="12,0,0,0" />
-					<Label Text="Editorial Desk" TextColor="DarkBlue" FontSize="16" Margin="12,6,0,0" />
+					<Image Source="ajour_logo.png" WidthRequest="24" HeightRequest="24" Margin="8,0,0,0" />
+					<Label Text="Tu redacción" TextColor="{x:StaticResource editor_forground}" FontSize="16" Margin="8,0,0,0" VerticalTextAlignment="Center" />
 				</HorizontalStackLayout>
 			</TitleBar.LeadingContent>
 			<TitleBar.TrailingContent>
 				<HorizontalStackLayout VerticalOptions="Center">
-					<Label Text="Ajour Media AS" TextColor="Gray" />
+					<Label Text="Ajour Media AS" FontSize="14" TextColor="Gray" Padding="0,0,0,0" />
 				</HorizontalStackLayout>
 			</TitleBar.TrailingContent>
 		</TitleBar>

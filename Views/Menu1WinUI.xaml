@@ -7,28 +7,8 @@
     xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
     xmlns:droid="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
 	xmlns:ajourlib="clr-namespace:Ajour.EditorLib;assembly=Ajour.EditorLib"
-    BackgroundColor="{StaticResource Gray100}"
+    BackgroundColor="{StaticResource editor_background}"
 	>
-
-	<Shell.TitleView>
-		<AbsoluteLayout>
-			<Grid 
-			    AbsoluteLayout.LayoutBounds="0,0,1,1" 
-			    AbsoluteLayout.LayoutFlags="All"
-			    >
-				<Label 
-				    Text="Write articles, copy html from web pages, import rtf and html documents from emails"
-				    FontFamily="MyriadProRegular"
-				    FontSize="16"
-					TextColor="DarkBlue"
-				    Padding="10,0,0,0"
-				    VerticalTextAlignment="Center"
-					BackgroundColor="Transparent"
-				    />
-			</Grid>
-		</AbsoluteLayout>
-	</Shell.TitleView>
-
 	<AbsoluteLayout x:Name="MainGrid">
 		<Grid
 			AbsoluteLayout.LayoutBounds="0,0,1,1" 

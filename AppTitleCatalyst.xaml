@@ -5,21 +5,16 @@
     x:Class="TestAjourEditor.AppTitleCatalyst"
 	>
 	<Window.TitleBar>
-		<TitleBar HeightRequest="48">
-			<!--
+		<TitleBar HeightRequest="32" BackgroundColor="{StaticResource editor_background}">
 			<TitleBar.Content>
-				<SearchBar WidthRequest="160" />
-			</TitleBar.Content>
-			-->
-			<TitleBar.LeadingContent>
-				<HorizontalStackLayout VerticalOptions="Center">
-					<Image Source="ajour_logo.png" WidthRequest="32" HeightRequest="32" Margin="12,0,0,0" />
-					<Label Text="Editorial Desk" TextColor="DarkBlue" FontSize="18" Margin="8,0,0,0" VerticalTextAlignment="Center" />
+				<HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+					<Image Source="ajour_logo.png" WidthRequest="24" HeightRequest="24" Margin="12,0,0,0" />
+					<Label Text="Tu redacción" TextColor="{x:StaticResource editor_forground}" FontSize="18" Margin="8,0,0,0" VerticalTextAlignment="Center" />
 				</HorizontalStackLayout>
-			</TitleBar.LeadingContent>
+			</TitleBar.Content>
 			<TitleBar.TrailingContent>
 				<HorizontalStackLayout VerticalOptions="Center">
-					<Label Text="Ajour Media AS" FontSize="16" TextColor="Gray" Padding="0,0,30,0" />
+					<Label Text="Ajour Media AS" FontSize="16" TextColor="Gray" Padding="0,0,10,0" />
 				</HorizontalStackLayout>
 			</TitleBar.TrailingContent>
 		</TitleBar>
