@@ -44,6 +44,17 @@
 - Click the **Paste** button in the editor to **edit the content** from the web page as an **editable document**.
 - The document is now completely independent of the web page you copied it from. You can edit it as you wish and save the result to your local hard drive as **html** or **rtf** file format.
 
+
+### Customize your own appearance:
+```xhtml
+<Color x:Key="editor_background">#C8C8C8</Color>
+<Color x:Key="editor_background_dark">#ACACAC</Color>
+<Color x:Key="editor_background_selected">#E1E1E1</Color>
+<Color x:Key="editor_forground">#141414</Color>
+<Color x:Key="Greenish">#339933</Color>
+```
+
+
 [^1]: Copyright © 1991 - 2025 Ajour Media AS.
 
 ```cs
