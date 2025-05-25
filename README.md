@@ -10,6 +10,21 @@
 #### Module 3: Choosing the image section, correct resolution, light and contrast.
 #### Module 4: Format/design the article with text and images to the desired layout for print, web and mobile.
 
+### TODO:
+**v1.4.42, implemented features** (Windows, Mac, iOS):
+New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Switch between paragraph stylesheets.
+
+**Limitations:**
+Can only change bold/italic/underline within the selected paragraph.
+Save as Html is not yet operational.
+Drag and drop is not yet implemented.
+Android devices is not yet operational.
+
+![Printscreen](editor.png)
+
+![Printscreen](mobile.png)
+
+
 ### PROJECT: TESTE AJOUR EDITOR Library
 1. Create a new MAUI Application
 2. Add Nuget package [Ajour.EditorLib.1.4.xx.nupkg]()<br/>
@@ -23,21 +38,6 @@
 5. Open **MainPage.xaml.cs**<br/>
 5.a remove sample source
 6. Build and run
-
-![Printscreen](editor.png)
-
-![Printscreen](mobile.png)
-
-
-### TODO:
-**v1.4.42, implemented features** (Windows, Mac, iOS):
-New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Switch between paragraph stylesheets.
-
-**Limitations:**
-Can only change bold/italic/underline within the selected paragraph.
-Save as Html is not yet operational.
-Drag and drop is not yet implemented.
-Android devices is not yet operational.
 
 
 ### Customize your own appearance:
