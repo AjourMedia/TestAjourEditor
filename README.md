@@ -30,19 +30,14 @@
 
 
 ### TODO:
-- [x] **Save As RTF** fileformat from Windows, iOS and MacOS. (Limited to one style template).
-- [x] Open .rtf files from Windows, iOS and MacOS  (v1.4.36)
-- [x] Click the Open File button **testfil2 med bilder**.html (v1.4.30)
-- [x] Text Styles: Type some text and click **B**, **I** eller **U** (v1.4.21)
+**v1.4.42, implemented features** (Windows, Mac, iOS):
+New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Switch between paragraph stylesheets.
 
-**Task 1:** 
-- Open an html page in the editor as an editable document.
-- Save the document to your local hard drive as **html** or **rtf** file format.
-
-**Task 2:** 
-- Load a web page from your web browser. **Highlight** the content you are interested in and **copy** it to the clipboard.
-- Click the **Paste** button in the editor to **edit the content** from the web page as an **editable document**.
-- The document is now completely independent of the web page you copied it from. You can edit it as you wish and save the result to your local hard drive as **html** or **rtf** file format.
+**Limitations:**
+Can only change bold/italic/underline within the selected paragraph.
+Save as Html is not yet operational.
+Drag and drop is not yet implemented.
+Android devices is not yet operational.
 
 
 ### Customize your own appearance:
