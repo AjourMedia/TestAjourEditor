@@ -5,7 +5,7 @@
 ### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
 
 #### NB! This is a very early phase of a project that is planned to run throughout 2025. Input and ideas will be gratefully received.
-#### Module 1: Write articles, copy html from web pages, import rtf and html documents from emails.
+#### Module 1: Write articles, using paragraph stylesheets and character styles. Save as rtf and html. Send via epost or create your own favorite https destination channels.
 #### Module 2: Texts, images and videos are linked to the article from here.
 #### Module 3: Choosing the image section, correct resolution, light and contrast.
 #### Module 4: Format/design the article with text and images to the desired layout for print, web and mobile.
@@ -20,7 +20,7 @@ Save as Html is not yet operational.
 Drag and drop is not yet implemented.
 Android devices is not yet operational.
 
-![Printscreen](xxx.png)
+![Printscreen](editor.png)
 
 ![Printscreen](iphone.png)
 
