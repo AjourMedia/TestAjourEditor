@@ -22,7 +22,7 @@ Android devices is not yet operational.
 
 ![Printscreen](editor.png)
 
-![Printscreen](mobile.png)
+![Printscreen](iphone.png)
 
 
 ### PROJECT: TESTE AJOUR EDITOR Library
