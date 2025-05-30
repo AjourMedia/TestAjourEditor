@@ -20,7 +20,7 @@ Save as Html is not yet operational.
 Drag and drop is not yet implemented.
 Android devices is not yet operational.
 
-![Printscreen](editor.png)
+![Printscreen](xxx.png)
 
 ![Printscreen](iphone.png)
 
