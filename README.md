@@ -20,9 +20,9 @@ Save as Html is not yet operational.
 Drag and drop is not yet implemented.
 Android devices is not yet operational.
 
-![Printscreen](editor.png)
+![Printscreen](reporter_iPad.png)
 
-![Printscreen](iphone.png)
+![Printscreen](reporter_iPhone.png)
 
 
 ### PROJECT: TESTE AJOUR EDITOR Library
