@@ -17,9 +17,11 @@ New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Un
 **Limitations:**
 Can only change bold/italic/underline within the selected paragraph.
 Save as Html is not yet operational.
-Drag and drop is not yet implemented.
-Create header file to load your custom paragraph styles and textstyles from private harddisk.
-Create header file to load your clients custom paragraph styles and textstyles from a rest server.
+Drag and drop is not implemented yet.
+Create header file to load your custom paragraph styles and text styles from your available storage.
+Create header file to load customer's custom paragraph styles and text styles from a rest server.
+In addition to your local email client, define your own email channels using SMTP.
+Print your documents to the installed printer.
 
 ![Printscreen](reporter_iPad.png)
 
