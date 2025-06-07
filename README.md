@@ -11,14 +11,15 @@
 #### Module 4: Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
 
 ### TODO:
-**v1.4.42, implemented features** (Windows, Mac, iOS):
-New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Switch between paragraph stylesheets.
+**v1.4.57, implemented features** (Windows, Mac, iOS, Android):
+New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Formatting document using paragraph stylesheets and textstyles.
 
 **Limitations:**
 Can only change bold/italic/underline within the selected paragraph.
 Save as Html is not yet operational.
 Drag and drop is not yet implemented.
-Android devices is not yet operational.
+Create header file to load your custom paragraph styles and textstyles from private harddisk.
+Create header file to load your clients custom paragraph styles and textstyles from a rest server.
 
 ![Printscreen](reporter_iPad.png)
 
