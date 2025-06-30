@@ -22,10 +22,7 @@ Create header file to load customer's custom paragraph styles and text styles fr
 In addition to your local email client, define your own email channels using SMTP.
 Print your documents to the installed printer.
 
-Windows
 ![Printscreen](reporter_windows.png)
-
-Android
 ![Printscreen](android_mobile.png)
 
 
