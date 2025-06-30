@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/testfil med stitt og utitt.html
+/README.md
+/mobile.png
+/editor.png
+/Ajour.EditorLib.1.4.41.nupkg
