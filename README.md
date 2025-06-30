@@ -133,18 +133,26 @@ Info.plist
 ```
 
 
-**Mac Catalyst Required:**
+**Mac Catalyst Crashes at Apple:**
 ```plist
-- Crashes..!
 <key>UIDeviceFamily</key>
 <array>
 <integer>6</integer>
 </array>
-- Alternative..!
+```
+
+
+**Mac Catalyst Alternative:**
+```plist
 <key>UIDeviceFamily</key>
 <array>
 <integer>2</integer>
 </array>
+```
+
+
+**Mac Catalyst Required:**
+```plist
 Entitlements.plist
 <key>com.apple.security.files.user-selected.read-write</key>
 <true/>
