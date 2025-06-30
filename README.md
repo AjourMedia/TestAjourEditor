@@ -26,6 +26,8 @@ Print your documents to the installed printer.
 ![Printscreen](android_mobile.png)
 ![Printscreen](reporter_iPhone.png)
 
+![Printscreen](reporter_macintosh.png)
+
 
 ### PROJECT: TESTE AJOUR EDITOR Library
 1. Create a new MAUI Application
