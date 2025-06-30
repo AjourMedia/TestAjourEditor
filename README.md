@@ -129,6 +129,10 @@ Info.plist
 <true/>
 <key>com.apple.security.personal-information.photos-library</key>
 <true/>
+<key>UIDeviceFamily</key>
+<array>
+<integer>6</integer>
+</array>
 ```
 
 
