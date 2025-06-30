@@ -24,7 +24,7 @@ Print your documents to the installed printer.
 
 ![Printscreen](reporter_windows.png)
 
-![Printscreen](reporter_iPhone.png)
+![Printscreen](android_mobile.png)
 
 
 ### PROJECT: TESTE AJOUR EDITOR Library
