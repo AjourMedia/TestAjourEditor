@@ -4,7 +4,6 @@
 
 ### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
 
-#### NB! This is a very early phase of a project that is planned to run throughout 2025. Input and ideas will be gratefully received.
 #### Module 1: Write articles, using paragraph stylesheets and character styles. Save as rtf and html. Publish your stories via epost, your favorite social media platforms or create your own favorite smtp, ftp and https/rest destination channels.
 #### Module 2: Texts, images and videos are linked to the article from here.
 #### Module 3: Choosing the image section, correct resolution, light and contrast.
@@ -23,7 +22,7 @@ Create header file to load customer's custom paragraph styles and text styles fr
 In addition to your local email client, define your own email channels using SMTP.
 Print your documents to the installed printer.
 
-![Printscreen](reporter_iPad.png)
+![Printscreen](reporter_windows.png)
 
 ![Printscreen](reporter_iPhone.png)
 
