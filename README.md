@@ -135,9 +135,15 @@ Info.plist
 
 **Mac Catalyst Required:**
 ```plist
+- Crashes..!
 <key>UIDeviceFamily</key>
 <array>
 <integer>6</integer>
+</array>
+- Alternative..!
+<key>UIDeviceFamily</key>
+<array>
+<integer>2</integer>
 </array>
 Entitlements.plist
 <key>com.apple.security.files.user-selected.read-write</key>
