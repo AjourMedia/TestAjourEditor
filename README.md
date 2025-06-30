@@ -130,15 +130,15 @@ Info.plist
 <true/>
 <key>com.apple.security.personal-information.photos-library</key>
 <true/>
-<key>UIDeviceFamily</key>
-<array>
-<integer>6</integer>
-</array>
 ```
 
 
 **Mac Catalyst Required:**
 ```plist
+<key>UIDeviceFamily</key>
+<array>
+<integer>6</integer>
+</array>
 Entitlements.plist
 <key>com.apple.security.files.user-selected.read-write</key>
 <true/>
