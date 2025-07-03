@@ -10,6 +10,7 @@
 #### Module 4: Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
 
 ### TODO:
+**v1.7.0, Apple bug** (iOS): Select Parastyles and Textstyles from the popup window needs LongPress to select, 2-3 seconds.
 **v1.4.57, implemented features** (Windows, Mac, iOS, Android):
 New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Formatting document using paragraph stylesheets and textstyles.
 
