@@ -1,4 +1,4 @@
-# ![Ajour Media](https://www.ajourmedia.no/reporter/logo64.png) Maui Cross platform Editor-library<br/>for HTML, XML and RTF.[^1]
+# ![Ajour Media](https://github.com/AjourMedia/TestAjourEditor/blob/master/logo64.png) Maui Cross platform Editor-library<br/>for HTML, XML and RTF.[^1]
 
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
@@ -23,11 +23,11 @@ Create header file to load customer's custom paragraph styles and text styles fr
 In addition to your local email client, define your own email channels using SMTP.
 Print your documents to the installed printer.
 
-![Windows Desktop](https://www.ajourmedia.no/reporter/reporter_windows.png)
-![Android Mobile](https://www.ajourmedia.no/reporter/android_mobile.png)
+![Windows Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_windows.png)
+![Android Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/android_mobile.png)
 
-![MacOS Desktop](https://www.ajourmedia.no/reporter/reporter_macintosh.png)
-![iPhone Mobile](https://www.ajourmedia.no/reporter/reporter_iPhone.png)
+![MacOS Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_macintosh.png)
+![iPhone Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_iPhone.png)
 
 
 ### PROJECT: TESTE AJOUR EDITOR Library
