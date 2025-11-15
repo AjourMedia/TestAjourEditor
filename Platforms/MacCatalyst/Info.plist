@@ -3,13 +3,19 @@
 <plist version="1.0">
 	<dict>
 		<key>CFBundleName</key>
-		<string>Reporter</string>
+		<string>TestAjourEditor</string>
 		<key>CFBundleDisplayName</key>
-		<string>Ajour Reporter</string>
+		<string>TestAjourEditor</string>
 		<key>CFBundleIdentifier</key>
-		<string>no.ajourmedia.reporter</string>
+		<string>no.ajourmedia.TestAjourEditor</string>
 		<key>CFBundleShortVersionString</key>
-		<string>1.5</string>
+		<string>1.8</string>
+		<key>CFBundleVersion</key>
+		<string>31</string>
+		<key>CFBundleDevelopmentRegion</key>
+		<string>no</string>
+		<key>NSHumanReadableCopyright</key>
+		<string>Ajour Media © 1991-2025</string>
 		<key>UIRequiresFullScreen</key>
 		<true/>
 		<key>UIDeviceFamily</key>
@@ -33,5 +39,23 @@
 		<true/>
 		<key>com.apple.security.personal-information.photos-library</key>
 		<true/>
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>mailto</string>
+		</array>
+		<key>ITSAppUsesNonExemptEncryption</key>
+		<false/>
+		<key>NSCameraUsageDescription</key>
+		<string>Do you allow the app to take a picture?</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Do you allow the app to record a video?</string>
+		<key>NSPhotoLibraryAddUsageDescription</key>
+		<string>Do you allow the app to insert an image or video?</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>Do you allow the app to insert an image or video?</string>
+		<key>NSBluetoothAlwaysUsageDescription</key>
+		<string>Not in use by the this app.</string>
+		<key>LSApplicationCategoryType</key>
+		<string>public.app-category.news</string>
 	</dict>
 </plist>

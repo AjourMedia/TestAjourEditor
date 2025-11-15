@@ -13,6 +13,7 @@ namespace TestAjourEditor
             builder
                 .UseMauiApp<App>()
 				.UseMauiCommunityToolkit()
+				.UseMauiCommunityToolkitMediaElement()
 				.ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

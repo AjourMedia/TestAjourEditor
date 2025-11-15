@@ -9,7 +9,13 @@
 		<key>CFBundleIdentifier</key>
 		<string>no.ajourmedia.TestAjourEditor</string>
 		<key>CFBundleShortVersionString</key>
-		<string>1.0</string>
+		<string>1.8</string>
+		<key>CFBundleVersion</key>
+		<string>31</string>
+		<key>CFBundleDevelopmentRegion</key>
+		<string>no</string>
+		<key>NSHumanReadableCopyright</key>
+		<string>Ajour Media © 1991-2025</string>
 		<key>UIRequiresFullScreen</key>
 		<true/>
 		<key>LSRequiresIPhoneOS</key>
@@ -18,10 +24,6 @@
 		<array>
 			<integer>1</integer>
 			<integer>2</integer>
-		</array>
-		<key>UIRequiredDeviceCapabilities</key>
-		<array>
-			<string>arm64</string>
 		</array>
 		<key>UISupportedInterfaceOrientations</key>
 		<array>
@@ -35,6 +37,10 @@
 			<string>UIInterfaceOrientationPortraitUpsideDown</string>
 			<string>UIInterfaceOrientationLandscapeLeft</string>
 			<string>UIInterfaceOrientationLandscapeRight</string>
+		</array>
+		<key>UIRequiredDeviceCapabilities</key>
+		<array>
+			<string>arm64</string>
 		</array>
 		<key>XSAppIconAssets</key>
 		<string>Assets.xcassets/appicon.appiconset</string>
@@ -53,5 +59,21 @@
 		<true/>
 		<key>com.apple.security.personal-information.photos-library</key>
 		<true/>
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>mailto</string>
+		</array>
+		<key>ITSAppUsesNonExemptEncryption</key>
+		<false/>
+		<key>NSCameraUsageDescription</key>
+		<string>Do you allow the app to take a picture?</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Do you allow the app to record a video?</string>
+		<key>NSPhotoLibraryAddUsageDescription</key>
+		<string>Do you allow the app to insert an image or video?</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>Do you allow the app to insert an image or video?</string>
+		<key>NSBluetoothAlwaysUsageDescription</key>
+		<string>Not in use by the this app.</string>
 	</dict>
 </plist>
