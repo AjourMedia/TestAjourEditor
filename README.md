@@ -1,4 +1,4 @@
-# ![Ajour Media](logo64.png) Maui Cross platform Editor-library<br/>for HTML, XML and RTF.[^1]
+# ![Ajour Media](https://github.com/AjourMedia/TestAjourEditor/blob/master/logo64.png) Maui Cross platform Editor-library<br/>for HTML, XML and RTF.[^1]
 
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
@@ -10,8 +10,8 @@
 #### Module 4: Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
 
 ### TODO:
-**v1.7.1, Apple bug** (iOS): Select Parastyles and Textstyles from the popup window needs LongPress to select, 2-3 seconds.
-**v1.4.57, implemented features** (Windows, Mac, iOS, Android):
+**v1.7.2, Apple issue** (iOS): Select Parastyles and Textstyles from the popup window needs LongPress to select, 2-3 seconds.
+**v1.7.0, implemented features** (Windows, Mac, iOS, Android):
 New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Formatting document using paragraph stylesheets and textstyles.
 
 **Limitations:**
@@ -23,11 +23,11 @@ Create header file to load customer's custom paragraph styles and text styles fr
 In addition to your local email client, define your own email channels using SMTP.
 Print your documents to the installed printer.
 
-![Printscreen](reporter_windows.png)
-![Printscreen](android_mobile.png)
+![Windows Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_windows.png)
+![Android Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/android_mobile.png)
 
-![Printscreen](reporter_macintosh.png)
-![Printscreen](reporter_iPhone.png)
+![MacOS Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_macintosh.png)
+![iPhone Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_iPhone.png)
 
 
 ### PROJECT: TESTE AJOUR EDITOR Library
