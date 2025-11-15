@@ -34,7 +34,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 ![iPhone Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_iPhone.png)
 
 
-### PROJECT: TESTE AJOUR EDITOR Library
+##### <ins>PROJECT: TESTE AJOUR EDITOR Library</ins>
 1. Create a new MAUI Application
 2. Add Nuget package [Ajour.EditorLib.1.x.xx.nupkg]()<br/>
 2a. copy to your offline packages folder, then add to your project.
@@ -49,7 +49,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 6. Build and run
 
 
-### Customize your own appearance:
+#### <ins>Customize your own appearance:</ins>
 ```xhtml
 <Color x:Key="editor_background">#C8C8C8</Color>
 <Color x:Key="editor_background_dark">#ACACAC</Color>
