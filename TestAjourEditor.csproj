@@ -15,6 +15,7 @@
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
 		<IsTrimmable>True</IsTrimmable>
+		<NuGetAudit>False</NuGetAudit>
 
 		<!-- Versions -->
 		<Version>1.8.31</Version>
@@ -84,7 +85,6 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-ios'">
-		<ProvisioningType>manual</ProvisioningType>
 		<RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>
 		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
 		<MtouchLink>None</MtouchLink>
