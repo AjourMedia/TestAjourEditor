@@ -61,6 +61,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 
 [^1]: Copyright © 1991 - 2025 Ajour Media AS.
 
+##### <ins>MauiProgram.cs setup:</ins>
 ```cs
 using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
@@ -94,6 +95,7 @@ namespace TestAjourEditor
 }
 ```
 
+##### <ins>MainPage.xaml setup:</ins>
 ```xhtml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
@@ -170,7 +172,7 @@ Entitlements.plist
 ##### <ins>Windows requirements:</ins>
 ```
 >= SDK-version 10.0.22621.0
-- No setup is required.
+- No setup is required for debugging.
 ```
 
 ##### <ins>Optional: MacCatalyst and Windows</ins>
