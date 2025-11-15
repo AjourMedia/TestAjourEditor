@@ -18,8 +18,8 @@ Android simulator API 36.1, arm64 v8a, 16KB Page Size.<br />
 Mac> sudo dotnet workload update (verify SDK 10.0.100)<br />
 Windows> dotnet workload update (verify SDK 10.0.100)<br />
 Mac> open /Users/admin/Library/Caches/Xamarin (Obsolete)<br />
-Mac> open /Users/admin/Library/Caches/maui (.NET 10.0)<br />
-Mac> open /usr/local/share/dotnet/library-packs (local store to put Ajour.EditorLib.nupkg)<br />
+Mac> open /Users/admin/Library/Caches/maui (new location .NET 10.0)<br />
+Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put Ajour.EditorLib.nupkg)<br />
 
 ### TODO:
 **v1.7.2, Apple issue** (iOS): Select Parastyles and Textstyles from the popup window needs LongPress to select, 2-3 seconds.
