@@ -4,11 +4,10 @@
 
 ### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
 
-###### Module 1: Write articles, using paragraph stylesheets and character styles. Save as rtf and html. Publish your stories via epost, your favorite social media platforms or create your own favorite smtp, ftp and https/rest destination channels.
-###### Module 2: Texts, images and videos are linked to the article from here.
+###### **Module 1:** Write articles, using paragraph stylesheets and character styles. Save as rtf and html. Publish your stories via epost, your favorite social media platforms or create your own favorite smtp, ftp and https/rest destination channels.
+###### <ins>Module 2:</ins> Texts, images and videos are linked to the article from here.
 ###### Module 3: Choosing the image section, correct resolution, light and contrast.
 ###### Module 4: Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
-<br />
 
 ### TODO:
 Xcode Version **26.1.1** (17B100)<br />
