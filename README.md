@@ -21,8 +21,9 @@ Mac> open /Users/admin/Library/Caches/Xamarin (**Obsolete**)<br />
 Mac> open /Users/admin/Library/Caches/maui (**new location** .NET 10.0)<br />
 Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajour.EditorLib.nupkg**)<br />
 
-### <ins>TODO: ######v1.8.31</ins>
-**v1.8.31**<br />
+### <ins>TODO:</ins>
+#####**v1.8.31**<br />
+######**v1.8.31**<br />
 - Create new document, open existing document from local storage folder and save documents in file folder as .rtf file format.<br />
 - Style text using predefined paragraph stylesheets and text styles, as well as bold, italic, and underline.<br />
 - Edit the text letter by letter within the paragraph. Merging paragraphs and editing multiple selected letters at once is not yet available.<br />
