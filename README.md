@@ -34,7 +34,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 ![iPhone Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_iPhone.png)
 
 
-##### <ins>PROJECT: TESTE AJOUR EDITOR Library</ins>
+##### <ins>Project: Test Ajour Editor Library</ins>
 1. Create a new MAUI Application
 2. Add Nuget package [Ajour.EditorLib.1.x.xx.nupkg]()<br/>
 2a. copy to your offline packages folder, then add to your project.
@@ -108,7 +108,7 @@ namespace TestAjourEditor
 ```
 
 
-**Android Required:**
+##### <ins>Android requirements:</ins>
 ```xhtml
 XML
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
@@ -129,7 +129,7 @@ XML
 ```
 
 
-**iOS/Mac Catalyst Required:**
+##### <ins>iOS/Mac Catalyst requirements:</ins>
 ```plist
 Info.plist
 <key>com.apple.security.assets.movies.read-only</key>
@@ -149,8 +149,9 @@ Info.plist
 ```
 
 
-**Mac Catalyst Crashes at Apple:**
+##### <ins>Mac Catalyst configuration:</ins>
 ```plist
+Info.plist
 <key>UIDeviceFamily</key>
 <array>
 <integer>6</integer>
@@ -158,16 +159,7 @@ Info.plist
 ```
 
 
-**Mac Catalyst Alternative:**
-```plist
-<key>UIDeviceFamily</key>
-<array>
-<integer>2</integer>
-</array>
-```
-
-
-**Mac Catalyst Required:**
+##### <ins>Mac Catalyst requirements:</ins>
 ```plist
 Entitlements.plist
 <key>com.apple.security.files.user-selected.read-write</key>
@@ -175,13 +167,13 @@ Entitlements.plist
 ```
 
 
-**Windows Required:**
+##### <ins>Windows requirements:</ins>
 ```
-SDK-version 10.0.22621.0
+>= SDK-version 10.0.22621.0
 - No setup is required.
 ```
 
-**Optional: MacCatalyst and Windows**
+##### <ins>Optional: MacCatalyst and Windows</ins>
 ```cs
 #if MACCATALYST
 builder.Services.AddSingleton<AppTitleCatalyst>();
