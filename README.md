@@ -26,6 +26,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Create new document, open existing document from local storage folder and save documents in file folder as .rtf file format.<br />
 - Style text using predefined paragraph stylesheets and text styles, as well as bold, italic, and underline.<br />
 - Edit the text letter by letter within the paragraph. Merging paragraphs and editing multiple selected letters at once is not yet available.<br />
+<br />
 
 ![Windows Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_windows.png)
 ![Android Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/android_mobile.png)
@@ -36,7 +37,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 
 ### PROJECT: TESTE AJOUR EDITOR Library
 1. Create a new MAUI Application
-2. Add Nuget package [Ajour.EditorLib.1.4.xx.nupkg]()<br/>
+2. Add Nuget package [Ajour.EditorLib.1.x.xx.nupkg]()<br/>
 2a. copy to your offline packages folder, then add to your project.
 3. Open **MauiProgram.cs**<br/>
 3a. Add [using Ajour.EditorLib;]()<br/>
