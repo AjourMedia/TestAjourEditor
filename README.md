@@ -10,16 +10,16 @@
 #### Module 4: Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
 
 ### TODO:
-Xcode Version 26.1.1 (17B100)
-Xcode->Settings->Components:
-Verify installed = macOS 26.1 (25B74) SDK (Built-in)
-If not installed, install iOS 26.1 (23B77) SDK + iOS 26.1 (23B86) Simulator. 
-Android simulator API 36.1, arm64 v8a, 16KB Page Size.
-Mac> sudo dotnet workload update (verify SDK 10.0.100) 
-Windows> dotnet workload update (verify SDK 10.0.100)
-Mac> open /Users/admin/Library/Caches/Xamarin (Obsolete)
-Mac> open /Users/admin/Library/Caches/maui (.NET 10.0)
-Mac> open /usr/local/share/dotnet/library-packs (local store to put Ajour.EditorLib.nupkg)
+Xcode Version 26.1.1 (17B100)__
+Xcode->Settings->Components:__
+Verify installed = macOS 26.1 (25B74) SDK (Built-in)__
+If not installed, install iOS 26.1 (23B77) SDK + iOS 26.1 (23B86) Simulator. __
+Android simulator API 36.1, arm64 v8a, 16KB Page Size.__
+Mac> sudo dotnet workload update (verify SDK 10.0.100) __
+Windows> dotnet workload update (verify SDK 10.0.100)__
+Mac> open /Users/admin/Library/Caches/Xamarin (Obsolete)__
+Mac> open /Users/admin/Library/Caches/maui (.NET 10.0)__
+Mac> open /usr/local/share/dotnet/library-packs (local store to put Ajour.EditorLib.nupkg)__
 
 ### TODO:
 **v1.7.2, Apple issue** (iOS): Select Parastyles and Textstyles from the popup window needs LongPress to select, 2-3 seconds.
