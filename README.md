@@ -4,24 +4,28 @@
 
 ### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
 
-#### Module 1: Write articles, using paragraph stylesheets and character styles. Save as rtf and html. Publish your stories via epost, your favorite social media platforms or create your own favorite smtp, ftp and https/rest destination channels.
-#### Module 2: Texts, images and videos are linked to the article from here.
-#### Module 3: Choosing the image section, correct resolution, light and contrast.
-#### Module 4: Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
+###### <ins>Module 1:</ins> Write articles, using paragraph stylesheets and character styles. Save as rtf and html. Publish your stories via epost, your favorite social media platforms or create your own favorite smtp, ftp and https/rest destination channels.
+###### <ins>Module 2:</ins> Texts, images and videos are linked to the article from here.
+###### <ins>Module 3:</ins> Choosing the image section, correct resolution, light and contrast.
+###### <ins>Module 4:</ins> Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
 
-### TODO:
-**v1.7.2, Apple issue** (iOS): Select Parastyles and Textstyles from the popup window needs LongPress to select, 2-3 seconds.
-**v1.7.0, implemented features** (Windows, Mac, iOS, Android):
-New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Formatting document using paragraph stylesheets and textstyles.
+#### <ins>TODO:</ins>
+Xcode Version **26.1.1** (17B100)<br />
+Xcode->Settings->Components:<br />
+Verify installed = macOS 26.1 (25B74) SDK (Built-in)<br />
+If not installed, install iOS 26.1 (**23B77**) SDK + iOS 26.1 (23B86) Simulator.<br />
+Android simulator API **36.1**, arm64 v8a, **16KB** Page Size.<br />
+Mac> sudo dotnet workload update (verify SDK 10.0.100)<br />
+Windows> dotnet workload update (verify SDK 10.0.100)<br />
+Mac> open /Users/admin/Library/Caches/Xamarin (**Obsolete**)<br />
+Mac> open /Users/admin/Library/Caches/maui (**new location** .NET 10.0)<br />
+Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajour.EditorLib.nupkg**)<br />
 
-**Limitations:**
-Can only change bold/italic/underline within the selected paragraph.
-Save as Html is not yet operational.
-Drag and drop is not implemented yet.
-Create header file to load your custom paragraph styles and text styles from your available storage.
-Create header file to load customer's custom paragraph styles and text styles from a rest server.
-In addition to your local email client, define your own email channels using SMTP.
-Print your documents to the installed printer.
+#### <ins>v1.8.31</ins>
+- Create new document, open existing document from local storage folder and save documents in file folder as .rtf file format.<br />
+- Style text using predefined paragraph stylesheets and text styles, as well as bold, italic, and underline.<br />
+- Edit the text letter by letter within the paragraph. Merging paragraphs and editing multiple selected letters at once is not yet available.<br />
+<br />
 
 ![Windows Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_windows.png)
 ![Android Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/android_mobile.png)
@@ -30,9 +34,9 @@ Print your documents to the installed printer.
 ![iPhone Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_iPhone.png)
 
 
-### PROJECT: TESTE AJOUR EDITOR Library
+##### <ins>Project: Test Ajour Editor Library</ins>
 1. Create a new MAUI Application
-2. Add Nuget package [Ajour.EditorLib.1.4.xx.nupkg]()<br/>
+2. Add Nuget package [Ajour.EditorLib.1.x.xx.nupkg]()<br/>
 2a. copy to your offline packages folder, then add to your project.
 3. Open **MauiProgram.cs**<br/>
 3a. Add [using Ajour.EditorLib;]()<br/>
@@ -45,7 +49,7 @@ Print your documents to the installed printer.
 6. Build and run
 
 
-### Customize your own appearance:
+#### <ins>Customize your own appearance:</ins>
 ```xhtml
 <Color x:Key="editor_background">#C8C8C8</Color>
 <Color x:Key="editor_background_dark">#ACACAC</Color>
@@ -57,6 +61,7 @@ Print your documents to the installed printer.
 
 [^1]: Copyright © 1991 - 2025 Ajour Media AS.
 
+##### <ins>MauiProgram.cs setup:</ins>
 ```cs
 using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
@@ -90,6 +95,7 @@ namespace TestAjourEditor
 }
 ```
 
+##### <ins>MainPage.xaml setup:</ins>
 ```xhtml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
@@ -104,7 +110,7 @@ namespace TestAjourEditor
 ```
 
 
-**Android Required:**
+##### <ins>Android requirements:</ins>
 ```xhtml
 XML
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
@@ -115,10 +121,17 @@ XML
 <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
 <!-- Required only if your app needs to access audio files that other apps created -->
 <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+<queries>
+<intent>
+<action android:name="android.media.action.IMAGE_CAPTURE" />
+<action android:name="android.intent.action.SENDTO" />
+<data android:scheme="mailto" />
+</intent>
+</queries>
 ```
 
 
-**iOS/Mac Catalyst Required:**
+##### <ins>iOS/Mac Catalyst requirements:</ins>
 ```plist
 Info.plist
 <key>com.apple.security.assets.movies.read-only</key>
@@ -131,11 +144,16 @@ Info.plist
 <true/>
 <key>com.apple.security.personal-information.photos-library</key>
 <true/>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+<string>mailto</string>
+</array>
 ```
 
 
-**Mac Catalyst Crashes at Apple:**
+##### <ins>Mac Catalyst configuration:</ins>
 ```plist
+Info.plist
 <key>UIDeviceFamily</key>
 <array>
 <integer>6</integer>
@@ -143,16 +161,7 @@ Info.plist
 ```
 
 
-**Mac Catalyst Alternative:**
-```plist
-<key>UIDeviceFamily</key>
-<array>
-<integer>2</integer>
-</array>
-```
-
-
-**Mac Catalyst Required:**
+##### <ins>Mac Catalyst requirements:</ins>
 ```plist
 Entitlements.plist
 <key>com.apple.security.files.user-selected.read-write</key>
@@ -160,13 +169,13 @@ Entitlements.plist
 ```
 
 
-**Windows Required:**
+##### <ins>Windows requirements:</ins>
 ```
-SDK-version 10.0.22621.0
-- No setup is required.
+>= SDK-version 10.0.22621.0
+- No setup is required for debugging.
 ```
 
-**Optional: MacCatalyst and Windows**
+##### <ins>Optional: MacCatalyst and Windows</ins>
 ```cs
 #if MACCATALYST
 builder.Services.AddSingleton<AppTitleCatalyst>();
