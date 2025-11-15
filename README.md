@@ -23,21 +23,9 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 
 ### TODO:
 **v1.8.31**<br />
-- New, Open, Save document.<br />
-- Style text using predefined Paragraph and Text styles. As well as Bold, Italic and Underline.
-
-, Apple issue** (iOS): Select Parastyles and Textstyles from the popup window needs LongPress to select, 2-3 seconds.
-**v1.7.0, implemented features** (Windows, Mac, iOS, Android):
-New Document, Open Document, Save as Rtf, Change character styles Bold/Italic/Underline, Formatting document using paragraph stylesheets and textstyles.
-
-**Limitations:**
-Can only change bold/italic/underline within the selected paragraph.
-Save as Html is not yet operational.
-Drag and drop is not implemented yet.
-Create header file to load your custom paragraph styles and text styles from your available storage.
-Create header file to load customer's custom paragraph styles and text styles from a rest server.
-In addition to your local email client, define your own email channels using SMTP.
-Print your documents to the installed printer.
+- Create new document, open existing document from local storage folder and save documents in file folder as .rtf file format.<br />
+- Style text using predefined paragraph stylesheets and text styles, as well as bold, italic, and underline.<br />
+- Edit the text letter by letter within the paragraph. Merging paragraphs and editing multiple selected letters at once is not yet available.<br />
 
 ![Windows Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_windows.png)
 ![Android Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/android_mobile.png)
