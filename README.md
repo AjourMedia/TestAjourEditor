@@ -9,7 +9,7 @@
 ###### <ins>Module 3:</ins> Choosing the image section, correct resolution, light and contrast.
 ###### <ins>Module 4:</ins> Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
 
-### TODO:
+### <ins>TODO:</ins>
 Xcode Version **26.1.1** (17B100)<br />
 Xcode->Settings->Components:<br />
 Verify installed = macOS 26.1 (25B74) SDK (Built-in)<br />
@@ -21,7 +21,7 @@ Mac> open /Users/admin/Library/Caches/Xamarin (**Obsolete**)<br />
 Mac> open /Users/admin/Library/Caches/maui (**new location** .NET 10.0)<br />
 Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajour.EditorLib.nupkg**)<br />
 
-### TODO:
+### <ins>TODO: ######v1.8.31</ins>
 **v1.8.31**<br />
 - Create new document, open existing document from local storage folder and save documents in file folder as .rtf file format.<br />
 - Style text using predefined paragraph stylesheets and text styles, as well as bold, italic, and underline.<br />
