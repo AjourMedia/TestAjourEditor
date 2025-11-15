@@ -27,10 +27,16 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Edit the text letter by letter within the paragraph. Merging paragraphs and editing multiple selected letters at once is not yet available.<br />
 <br />
 
+##### <ins>Windows 11</ins>
 ![Windows Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_windows.png)
+
+##### <ins>Android 16.0</ins>
 ![Android Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/android_mobile.png)
 
+##### <ins>MacOS Tahoe 26.1</ins>
 ![MacOS Desktop](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_macintosh.png)
+
+##### <ins>iPhone 17</ins>
 ![iPhone Mobile](https://github.com/AjourMedia/TestAjourEditor/blob/master/reporter_iPhone.png)
 
 
