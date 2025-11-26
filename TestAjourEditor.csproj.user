@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ActiveDebugFramework>net10.0-ios</ActiveDebugFramework>
+    <ActiveDebugFramework>net10.0-windows10.0.26100.0</ActiveDebugFramework>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
-    <ActiveDebugProfile>iPhone 17 iOS 26.0</ActiveDebugProfile>
+    <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
     <SelectedPlatformGroup>Simulator</SelectedPlatformGroup>
     <DefaultDevice>iPhone 17 iOS 26.0</DefaultDevice>
   </PropertyGroup>
