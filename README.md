@@ -21,10 +21,22 @@ Mac> open /Users/admin/Library/Caches/Xamarin (**Obsolete**)<br />
 Mac> open /Users/admin/Library/Caches/maui (**new location** .NET 10.0)<br />
 Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajour.EditorLib.nupkg**)<br />
 
-#### <ins>v1.8.31</ins>
-- Create new document, open existing document from local storage folder and save documents in file folder as .rtf file format.<br />
+#### <ins>v1.8.60</ins>
+- Cross-platform support for Windows, MacOS, iOS, and Android.<br />
+- Bug fixes and stability improvements based on initial user feedback.<br />
+- File menu with options for new, open, save, save as, and export.<br
+- Using local storage folder for opening and saving documents.<br />
+- Open and save .rtf file format.<br />
+- Send document via email as .html, .rtf and .txt attachment.<br />
+- Print document to connected printer or print to pdf.<br />
 - Style text using predefined paragraph stylesheets and text styles, as well as bold, italic, and underline.<br />
-- Edit the text letter by letter within the paragraph. Merging paragraphs and editing multiple selected letters at once is not yet available.<br />
+- Apply text styles (Heading 1, Heading 2, Heading 3) to selected paragraphs.<br />
+- Apply text formatting (bold, italic, underline) to selected text.<br />
+- Responsive design for different screen sizes and orientations.<br />
+- Touch and mouse input support for text editing.<br />
+- Basic text navigation using arrow keys, page up/down, home/end, and mouse clicks.
+- Basic error handling for file operations and unsupported formats.<br />
+- Preliminary localization support for English, Spanish and Norwegian languages.<br />
 <br />
 
 ##### <ins>Windows 11</ins>
