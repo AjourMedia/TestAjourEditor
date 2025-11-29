@@ -6,8 +6,8 @@
 
 ###### <ins>Reporter:</ins> Text editor. Has two primary purposes. Ease of use and recognisability on all types of mobile and desktop devices on large or small monitors.
 ###### <ins>Text catalog:</ins> Your folder structure where you organize your different documents and which images and videos are linked to each of them.
-###### <ins>Image editing:</ins> Use soft cropping to select the area of ​​the image you are interested in. Correct resolution, light and contrast. Update XMP metadata. Images and videos are linked to your document from here.
-###### <ins>Planner:</ins> Advanced graphic layout tools for delivering to multiple publishing channels, pdf, rtf, html, social media. Different types of xml formatting adapted to the editorial team you are associated with.
+###### <ins>Image editing:</ins> Uses soft cropping tool to crop the image area you are interested in. Correct resolution, brightness, and contrast. Update XMP metadata. Images and videos are linked to your document from here.
+###### <ins>Planner:</ins> Advanced graphic tools to produce layout for publishing to multiple publishing channels, pdf, rtf, html, social media and different types of xml formatting adapted to the editorial team you are associated with.
 
 #### <ins>TODO:</ins>
 Xcode Version **26.1.1** (17B100)<br />
