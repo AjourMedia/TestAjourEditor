@@ -4,10 +4,10 @@
 
 ### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
 
-###### <ins>Module 1:</ins> Write articles, using paragraph stylesheets and character styles. Save as rtf and html. Publish your stories via epost, your favorite social media platforms or create your own favorite smtp, ftp and https/rest destination channels.
-###### <ins>Module 2:</ins> Texts, images and videos are linked to the article from here.
-###### <ins>Module 3:</ins> Choosing the image section, correct resolution, light and contrast.
-###### <ins>Module 4:</ins> Format/design and finalize the article with text and images to the desired layout for print, web and mobile. The finished product is saved as a pdf file. (The pdf module requires a separate license if the product is to be used commercially)
+###### <ins>Reporter:</ins> Text editor. Has two primary purposes. Ease of use and recognisability on all types of mobile and desktop devices on large or small monitors.
+###### <ins>Text catalog:</ins> Your folder structure where you organize your different documents and which images and videos are linked to each of them.
+###### <ins>Image editing:</ins> Use soft cropping to select the area of ​​the image you are interested in. Correct resolution, light and contrast. Update XMP metadata. Images and videos are linked to your document from here.
+###### <ins>Planner:</ins> Advanced graphic layout tools for delivering to multiple publishing channels, pdf, rtf, html, social media. Different types of xml formatting adapted to the editorial team you are associated with.
 
 #### <ins>TODO:</ins>
 Xcode Version **26.1.1** (17B100)<br />
