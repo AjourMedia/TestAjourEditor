@@ -23,7 +23,6 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 
 #### <ins>v1.8.60</ins>
 - Cross-platform support for Windows, MacOS, iOS, and Android.<br />
-- Bug fixes and stability improvements based on initial user feedback.<br />
 - File menu with options for new, open, save, save as, and export.<br
 - Using local storage folder for opening and saving documents.<br />
 - Open and save .rtf file format.<br />
@@ -37,6 +36,10 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Basic text navigation using arrow keys, page up/down, home/end, and mouse clicks.
 - Basic error handling for file operations and unsupported formats.<br />
 - Preliminary localization support for English, Spanish and Norwegian languages.<br />
+- Basic user interface with toolbar buttons for common actions.<br />
+#### <ins>v1.8.63</ins>
+- Bug fixes and stability improvements based on initial user feedback.<br />
+- Copy, cut, and paste text within the document.<br />
 <br />
 
 ##### <ins>Windows 11</ins>
