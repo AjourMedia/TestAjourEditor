@@ -18,7 +18,7 @@
 		<NuGetAudit>False</NuGetAudit>
 
 		<!-- Versions -->
-		<Version>1.8.63</Version>
+		<Version>1.8.64</Version>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- Product info -->
@@ -62,7 +62,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Ajour.EditorLib" Version="1.8.63" />
+		<PackageReference Include="Ajour.EditorLib" Version="1.8.64" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="13.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="7.0.0" />
