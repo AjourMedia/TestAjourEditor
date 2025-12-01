@@ -153,6 +153,7 @@ XML
 
 
 ##### <ins>iOS/Mac Catalyst requirements:</ins>
+UIRequiresFullScreen $${\color{orange} Deprecated}$$
 ```plist
 Info.plist
 <key>com.apple.security.assets.movies.read-only</key>
