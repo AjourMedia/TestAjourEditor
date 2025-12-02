@@ -38,8 +38,11 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Preliminary localization support for English, Spanish and Norwegian languages.<br />
 - Basic user interface with toolbar buttons for common actions.<br />
 #### <ins>v1.8.63</ins>
-- Bug fixes and stability improvements based on initial user feedback.<br />
 - Copy, cut, and paste text within the document.<br />
+#### <ins>v1.8.65</ins>
+- Bug fixes and stability improvements based on initial user feedback.<br />
+- Preliminary Undo and redo text changes.<br />
+- Localization support for English, Spanish and Norwegian languages.<br />
 <br />
 
 ##### <ins>Windows 11</ins>
