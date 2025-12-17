@@ -1,6 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="no.ajourmedia.TestAjourEditor" android:versionName="1.8" android:versionCode="65">
-	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:label="TestAjourEditor"></application>
+	<application android:icon="@mipmap/appicon" android:label="TestAjourEditor">
+		<!--
+		<activity android:name=".FileLauncher" android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:scheme="content" />
+				<data android:mimeType="text/rtf" />
+			</intent-filter>
+		</activity>
+		-->
+	</application>
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -12,6 +23,7 @@
 	<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
 	<!-- Required only if your app needs to access audio files that other apps created -->
 	<uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
 	<queries>
 		<intent>
 			<action android:name="android.media.action.IMAGE_CAPTURE" />

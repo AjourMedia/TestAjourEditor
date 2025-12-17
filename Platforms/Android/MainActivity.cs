@@ -4,8 +4,14 @@ using Android.OS;
 
 namespace TestAjourEditor
 {
-    [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
-    public class MainActivity : MauiAppCompatActivity
+	[Activity(Theme = "@style/Maui.SplashTheme",
+		MainLauncher = true,
+		LaunchMode = LaunchMode.SingleTask,
+		Exported = true,
+		ScreenOrientation = ScreenOrientation.Sensor,
+		ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.UiMode | ConfigChanges.KeyboardHidden | ConfigChanges.Density)
+	]
+	public class MainActivity : MauiAppCompatActivity
     {
     }
 }
