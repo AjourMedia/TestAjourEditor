@@ -147,6 +147,7 @@ XML
 <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
 <!-- Required only if your app needs to access audio files that other apps created -->
 <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
 <queries>
 <intent>
 <action android:name="android.media.action.IMAGE_CAPTURE" />
@@ -310,4 +311,32 @@ protected override async void OnAppLinkRequestReceived(Uri uri)
 		catch { }
 	});
 }
+```
+
+##### <ins>Android: App-to-App Deep Link support.</ins>
+- Verify exist else create: Android/Resources/layout/main.xml
+```xhtml
+<activity android:name=".FileLauncher" android:exported="true">
+	<intent-filter>
+		<action android:name="android.intent.action.VIEW" />
+		<category android:name="android.intent.category.DEFAULT" />
+		<data android:scheme="content" />
+		<data android:mimeType="text/rtf" />
+	</intent-filter>
+</activity>
+</queries>
+```
+```cs
+MainActivity.cs
+[Activity(MainLauncher = true,
+LaunchMode = LaunchMode.SingleTask,
+Exported = true,
+]
+FileLauncher.cs
+[Activity(MainLauncher = false,
+LaunchMode = LaunchMode.SingleTop,
+AllowTaskReparenting = true,
+Exported = true
+)
+]
 ```
