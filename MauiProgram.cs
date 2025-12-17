@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using Ajour.EditorLib;
-using TestAjourEditor.Views;
 
 namespace TestAjourEditor
 {

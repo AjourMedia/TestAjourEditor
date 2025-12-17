@@ -40,9 +40,11 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 #### <ins>v1.8.63</ins>
 - Copy, cut, and paste text within the document.<br />
 #### <ins>v1.8.65</ins>
-- Bug fixes and stability improvements based on initial user feedback.<br />
 - Preliminary Undo and redo text changes.<br />
 - Localization support for English, Spanish and Norwegian languages.<br />
+#### <ins>v1.8.86</ins>
+- Bug fixes and stability improvements based on initial user feedback.<br />
+- App-to-App Deep Link support for opening documents from other apps, or from other instances within the same project. Currently supports the RTF file type. All known file types will be added gradually.<br />
 <br />
 
 ##### <ins>Windows 11</ins>
@@ -277,3 +279,35 @@ protected override Window CreateWindow(IActivationState? activationState)
 }
 ```
 
+
+##### <ins>App.xaml.cs: App-to-App Deep Link support.</ins>
+```cs
+/// <summary>
+/// App-to-App Deep Link support. Imports registered file types: 
+/// - from operating system to the app.
+/// - from other apps to the app.
+/// - from other instances within the same app.
+/// </summary>
+protected override async void OnAppLinkRequestReceived(Uri uri)
+{
+	base.OnAppLinkRequestReceived(uri);
+
+	await Dispatcher.DispatchAsync(async () =>
+	{
+		try
+		{
+			// Application.Current.SendOnAppLinkRequestReceived(Uri uri) method.
+			// The Application.Current.SendOnAppLinkRequestReceived method is part
+			// of the Microsoft.Maui.Controls namespace and is used to send an
+			// app link request to this application.
+
+			if (uri.IsFile)
+			{
+				var ajourEditorViewModel = Microsoft.Maui.Controls.Application.Current.Handler.GetService<Ajour.EditorLib.ViewModels.AjourEditorViewModel>();
+				ajourEditorViewModel.ExecuteDeepLinkingCommand.Execute(uri.LocalPath);
+			}
+		}
+		catch { }
+	});
+}
+```

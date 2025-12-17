@@ -68,5 +68,35 @@
 				return new Window(new StartupMobile());
 			}
 		}
+
+
+		/// <summary>
+		/// App-to-App Deep Link support. Imports registered file types: 
+		/// - from operating system to the app.
+		/// - from other apps to the app.
+		/// - from other instances within the same app.
+		/// </summary>
+		protected override async void OnAppLinkRequestReceived(Uri uri)
+		{
+			base.OnAppLinkRequestReceived(uri);
+
+			await Dispatcher.DispatchAsync(async () =>
+			{
+				try
+				{
+					// Application.Current.SendOnAppLinkRequestReceived(Uri uri) method.
+					// The Application.Current.SendOnAppLinkRequestReceived method is part
+					// of the Microsoft.Maui.Controls namespace and is used to send an
+					// app link request to this application.
+
+					if (uri.IsFile)
+					{
+						var ajourEditorViewModel = Microsoft.Maui.Controls.Application.Current.Handler.GetService<Ajour.EditorLib.ViewModels.AjourEditorViewModel>();
+						ajourEditorViewModel.ExecuteDeepLinkingCommand.Execute(uri.LocalPath);
+					}
+				}
+				catch { }
+			});
+		}
 	}
 }
