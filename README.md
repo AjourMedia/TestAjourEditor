@@ -321,10 +321,14 @@ protected override async void OnAppLinkRequestReceived(Uri uri)
 	<intent-filter>
 		<action android:name="android.intent.action.VIEW" />
 		<category android:name="android.intent.category.DEFAULT" />
+<<<<<<< HEAD
 		<data android:scheme="file" />
 		<data android:scheme="content" />
 		<data android:host="*" />
 		<data android:pathPattern=".*\\.rtf" />
+=======
+		<data android:scheme="content" />
+>>>>>>> 347f4878daba5eb1d3fe99197d05776ba7a9f1a4
 		<data android:mimeType="text/rtf" />
 	</intent-filter>
 </activity>
