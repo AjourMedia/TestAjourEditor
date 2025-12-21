@@ -8,7 +8,7 @@
   IgnorableNamespaces="uap rescap uap18"
   >
 
-	<Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="1.8.65.0" />
+	<Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="1.8.89.0" />
 
 	<mp:PhoneIdentity PhoneProductId="26F9C003-D11C-47CF-873F-EBDE85F9D112" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -31,7 +31,7 @@
 		<Application
 			Id="App"
 			Executable="$targetnametoken$.exe"
-			EntryPoint="Windows.PartialTrustApplication"
+			EntryPoint="Windows.FullTrustApplication"  
 			uap18:RuntimeBehavior="windowsApp"
 			uap18:TrustLevel="appContainer"
 			>
@@ -53,11 +53,13 @@
 	</Applications>
 
 	<Capabilities>
+		<rescap:Capability Name="runFullTrust" />
 		<Capability Name="internetClient"/>
 		<uap:Capability Name="picturesLibrary"/>
 		<uap:Capability Name="videosLibrary"/>
 		<uap:Capability Name="musicLibrary"/>
 		<uap:Capability Name="removableStorage"/>
+		<DeviceCapability Name="microphone"/>
 	</Capabilities>
 
 </Package>

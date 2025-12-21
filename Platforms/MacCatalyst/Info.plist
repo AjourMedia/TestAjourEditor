@@ -11,13 +11,11 @@
 		<key>CFBundleShortVersionString</key>
 		<string>1.8</string>
 		<key>CFBundleVersion</key>
-		<string>65</string>
+		<string>89</string>
 		<key>CFBundleDevelopmentRegion</key>
 		<string>no</string>
 		<key>NSHumanReadableCopyright</key>
 		<string>Ajour Media © 1991-2025</string>
-		<key>UIRequiresFullScreen</key>
-		<true/>
 		<key>UIDeviceFamily</key>
 		<array>
 			<integer>6</integer>
@@ -29,6 +27,8 @@
 			<key>NSAllowsArbitraryLoads</key>
 			<true/>
 		</dict>
+		<key>ITSAppUsesNonExemptEncryption</key>
+		<false/>
 		<key>com.apple.security.assets.movies.read-only</key>
 		<true/>
 		<key>com.apple.security.assets.music.read-only</key>
@@ -39,23 +39,31 @@
 		<true/>
 		<key>com.apple.security.personal-information.photos-library</key>
 		<true/>
+		<key>com.apple.security.files.user-selected.read-write</key>
+		<true/>
 		<key>LSApplicationQueriesSchemes</key>
 		<array>
 			<string>mailto</string>
 		</array>
-		<key>ITSAppUsesNonExemptEncryption</key>
-		<false/>
 		<key>NSCameraUsageDescription</key>
 		<string>Do you allow the app to take a picture?</string>
 		<key>NSMicrophoneUsageDescription</key>
-		<string>Do you allow the app to record a video?</string>
+		<string>SpeechToText requires microphone usage</string>
+		<key>NSSpeechRecognitionUsageDescription</key>
+		<string>SpeechToText requires speech recognition usage</string>
 		<key>NSPhotoLibraryAddUsageDescription</key>
 		<string>Do you allow the app to insert an image or video?</string>
 		<key>NSPhotoLibraryUsageDescription</key>
 		<string>Do you allow the app to insert an image or video?</string>
-		<key>NSBluetoothAlwaysUsageDescription</key>
-		<string>Not in use by the this app.</string>
-		<key>LSApplicationCategoryType</key>
-		<string>public.app-category.news</string>
+		<key>UISupportsDocumentBrowser</key>
+		<true/>
+		<key>NSExtensionActivationSupportsText</key>
+		<true/>
+		<key>LSSupportsOpeningDocumentsInPlace</key>
+		<true/>
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>fetch</string>
+		</array>
 	</dict>
 </plist>

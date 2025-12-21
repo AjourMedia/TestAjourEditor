@@ -9,16 +9,12 @@
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<NoWarn>1701;1702;CS0168;CS0219;CS0414;CS1570;CS1587;CS8600;CS8602;CS8603;CS8604;CS8618;XC0103</NoWarn>
-		<_MauiForceXamlCForDebug>true</_MauiForceXamlCForDebug>
+		<NoWarn>1701;1702;CS0168;CS0219;CS0414;CS1570;CS1587;CS8600;CS8602;CS8603;CS8604;CS8618;XC0103;XA0101</NoWarn>
 		<LangVersion>preview</LangVersion>
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
-		<IsTrimmable>True</IsTrimmable>
-		<NuGetAudit>False</NuGetAudit>
 
 		<!-- Versions -->
-		<Version>1.8.65</Version>
+		<Version>1.8.89</Version>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- Product info -->
@@ -62,7 +58,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Ajour.EditorLib" Version="1.8.86" />
+		<PackageReference Include="Ajour.EditorLib" Version="1.8.89" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="13.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="7.0.0" />
@@ -75,37 +71,26 @@
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-android'">
+		<RuntimeIdentifier>android-arm64</RuntimeIdentifier>
 		<AndroidManifestApplicationPackageName>no.ajourmedia.TestAjourEditor</AndroidManifestApplicationPackageName>
-		<RuntimeIdentifiers>android-x64;android-arm64</RuntimeIdentifiers>
 		<JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
 		<EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
-		<MtouchLink>None</MtouchLink>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>portable</DebugType>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-ios'">
 		<RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>
 		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
-		<MtouchLink>None</MtouchLink>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>portable</DebugType>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Release|net10.0-maccatalyst'">
-		<!-- Mandatory in Release mode -->
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-maccatalyst'">
+		<RuntimeIdentifier>maccatalyst-x64</RuntimeIdentifier>
+		<ProvisioningType>manual</ProvisioningType>
 		<CodesignEntitlements>Platforms\MacCatalyst\Entitlements.plist</CodesignEntitlements>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-maccatalyst'">
-		<ProvisioningType>manual</ProvisioningType>
-		<RuntimeIdentifier>maccatalyst-x64</RuntimeIdentifier>
-		<MtouchLink>None</MtouchLink>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>portable</DebugType>
-		<!-- Do not use Entitlements.plist in debug mode -->
-		<!-- <CodesignEntitlements>Platforms\MacCatalyst\Entitlements.plist</CodesignEntitlements> -->
-	</PropertyGroup>
 
+	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
+		<DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+	</PropertyGroup>
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows')) and '$(Configuration)' == 'Debug'">
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<RuntimeIdentifiers>win-x64;win-arm64</RuntimeIdentifiers>
@@ -114,9 +99,11 @@
 		<WindowsPackageType>None</WindowsPackageType>
 		<PublishSingleFile>True</PublishSingleFile>
 		<SelfContained>True</SelfContained>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+		<_MauiForceXamlCForDebug>true</_MauiForceXamlCForDebug>
 		<MtouchLink>None</MtouchLink>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>portable</DebugType>
 	</PropertyGroup>
 
 </Project>

@@ -13,5 +13,22 @@ namespace TestAjourEditor
 	]
 	public class MainActivity : MauiAppCompatActivity
     {
+        protected override void OnCreate(Bundle? savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+  
+			#if DEBUG
+			StrictMode.SetVmPolicy(
+				new StrictMode.VmPolicy.Builder()
+					.DetectLeakedClosableObjects()
+					.DetectLeakedRegistrationObjects()
+					.DetectActivityLeaks()
+					.DetectUnsafeIntentLaunch()
+					.PenaltyDropBox()
+					.PenaltyLog()
+					.Build()
+				);
+			#endif
+		}
     }
 }

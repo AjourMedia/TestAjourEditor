@@ -43,8 +43,9 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Preliminary Undo and redo text changes.<br />
 - Localization support for English, Spanish and Norwegian languages.<br />
 #### <ins>v1.8.86</ins>
-- Bug fixes and stability improvements based on initial user feedback.<br />
 - App-to-App Deep Link support for opening documents from other apps, or from other instances within the same project. Currently supports the RTF file type. All known file types will be added gradually.<br />
+#### <ins>v1.8.89</ins>
+- Bug fixes and stability improvements based on initial user feedback.<br />
 <br />
 
 ##### <ins>Windows 11</ins>
@@ -320,7 +321,10 @@ protected override async void OnAppLinkRequestReceived(Uri uri)
 	<intent-filter>
 		<action android:name="android.intent.action.VIEW" />
 		<category android:name="android.intent.category.DEFAULT" />
+		<data android:scheme="file" />
 		<data android:scheme="content" />
+		<data android:host="*" />
+		<data android:pathPattern=".*\\.rtf" />
 		<data android:mimeType="text/rtf" />
 	</intent-filter>
 </activity>
