@@ -10,10 +10,10 @@
 ###### <ins>Planner:</ins> Advanced graphic tools to produce layout for publishing to multiple publishing channels, pdf, rtf, html, social media and different types of xml formatting adapted to the editorial team you are associated with.
 
 #### <ins>TODO:</ins>
-Xcode Version **26.1.1** (17B100)<br />
+Xcode Version **26.2** (17C52)<br />
 Xcode->Settings->Components:<br />
-Verify installed = macOS 26.1 (25B74) SDK (Built-in)<br />
-If not installed, install iOS 26.1 (**23B77**) SDK + iOS 26.1 (23B86) Simulator.<br />
+Verify installed = macOS 26.2 (25C57) SDK (Built-in)<br />
+If not installed, install iOS 26.2 (**23C53**) SDK + iOS 26.2 (**23C54**) Simulator.<br />
 Android simulator API **36.1**, arm64 v8a, **16KB** Page Size.<br />
 Mac> sudo dotnet workload update (verify SDK 10.0.100)<br />
 Windows> dotnet workload update (verify SDK 10.0.100)<br />
