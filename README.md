@@ -83,6 +83,8 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 <Color x:Key="editor_background_selected">#E1E1E1</Color>
 <Color x:Key="editor_forground">#141414</Color>
 <Color x:Key="Greenish">#339933</Color>
+<System:String x:Key="DefaultFontFamily">OpenSansRegular</System:String>
+<System:String x:Key="ReporterFontFamily">OpenSansRegular</System:String>
 ```
 
 
@@ -321,14 +323,10 @@ protected override async void OnAppLinkRequestReceived(Uri uri)
 	<intent-filter>
 		<action android:name="android.intent.action.VIEW" />
 		<category android:name="android.intent.category.DEFAULT" />
-<<<<<<< HEAD
 		<data android:scheme="file" />
 		<data android:scheme="content" />
 		<data android:host="*" />
 		<data android:pathPattern=".*\\.rtf" />
-=======
-		<data android:scheme="content" />
->>>>>>> 347f4878daba5eb1d3fe99197d05776ba7a9f1a4
 		<data android:mimeType="text/rtf" />
 	</intent-filter>
 </activity>
@@ -339,12 +337,11 @@ MainActivity.cs
 [Activity(MainLauncher = true,
 LaunchMode = LaunchMode.SingleTask,
 Exported = true,
-]
+...]
 FileLauncher.cs
 [Activity(MainLauncher = false,
 LaunchMode = LaunchMode.SingleTop,
 AllowTaskReparenting = true,
-Exported = true
-)
+Exported = true)
 ]
 ```
