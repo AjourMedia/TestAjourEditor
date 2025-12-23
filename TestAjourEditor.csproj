@@ -14,7 +14,7 @@
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 
 		<!-- Versions -->
-		<Version>1.8.89</Version>
+		<Version>1.8.90</Version>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- Product info -->
@@ -58,7 +58,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Ajour.EditorLib" Version="1.8.89" />
+		<PackageReference Include="Ajour.EditorLib" Version="1.8.90" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="13.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="7.0.0" />
@@ -78,14 +78,20 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-ios'">
-		<RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>
+		<!--<RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>-->
+		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
 		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+		<ProvisioningType>manual</ProvisioningType>
+		<CodesignKey>Apple Development: Created via API (AYNJKDV998)</CodesignKey>
+		<CodesignProvision>TestAjourEditor - iOS Dev</CodesignProvision>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-maccatalyst'">
 		<RuntimeIdentifier>maccatalyst-x64</RuntimeIdentifier>
-		<ProvisioningType>manual</ProvisioningType>
 		<CodesignEntitlements>Platforms\MacCatalyst\Entitlements.plist</CodesignEntitlements>
+		<ProvisioningType>manual</ProvisioningType>
+		<CodesignKey>Apple Development: Created via API (AYNJKDV998)</CodesignKey>
+		<CodesignProvision>TestAjourEditor - Mac Dev</CodesignProvision>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
