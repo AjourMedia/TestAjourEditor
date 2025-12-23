@@ -3,7 +3,7 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net10.0-ios</ActiveDebugFramework>
-    <ActiveDebugProfile>Morten sin iPhoneX</ActiveDebugProfile>
+    <ActiveDebugProfile>Remote Device</ActiveDebugProfile>
     <SelectedPlatformGroup>RemoteDevice</SelectedPlatformGroup>
     <DefaultDevice>iPhone 17 iOS 26.2</DefaultDevice>
     <TargetiOSDevice>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
