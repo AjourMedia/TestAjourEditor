@@ -44,7 +44,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Localization support for English, Spanish and Norwegian languages.<br />
 #### <ins>v1.8.86</ins>
 - App-to-App Deep Link support for opening documents from other apps, or from other instances within the same project. Currently supports the RTF file type. All known file types will be added gradually.<br />
-#### <ins>v1.8.89</ins>
+#### <ins>v1.8.90</ins>
 - Bug fixes and stability improvements based on initial user feedback.<br />
 <br />
 
