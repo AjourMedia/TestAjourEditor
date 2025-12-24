@@ -8,7 +8,7 @@
   IgnorableNamespaces="uap rescap uap18"
   >
 
-	<Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="1.8.90.0" />
+	<Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="1.8.91.0" />
 
 	<mp:PhoneIdentity PhoneProductId="26F9C003-D11C-47CF-873F-EBDE85F9D112" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -49,6 +49,41 @@
 					<uap:Rotation Preference="landscapeFlipped"/>
 				</uap:InitialRotationPreference>
 			</uap:VisualElements>
+			<Extensions>
+				<uap:Extension Category="windows.fileTypeAssociation" Executable="TestAjourEditor.exe" EntryPoint="TestAjourEditor.WinUI.App">
+					<uap:FileTypeAssociation
+						Name="reporter"
+						a:AllowSilentDefaultTakeOver="false"
+						a:UseUrl="false"
+						b:Launch="file"
+						xmlns:b="http://schemas.microsoft.com/appx/manifest/uap/windows10/8"
+						xmlns:a="http://schemas.microsoft.com/appx/manifest/desktop/windows10/2"
+						>
+						<uap:DisplayName>TestAjourEditor</uap:DisplayName>
+						<uap:InfoTip>Ajour Reporter Fileformats</uap:InfoTip>
+						<uap:SupportedFileTypes>
+							<uap:FileType ContentType="text/rtf">.rtf</uap:FileType>
+							<uap:FileType ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document">.docx</uap:FileType>
+						</uap:SupportedFileTypes>
+						<uap:EditFlags OpenIsSafe="true" />
+					</uap:FileTypeAssociation>
+				</uap:Extension>
+				<uap:Extension Category="windows.fileOpenPicker" EntryPoint="TestAjourEditor.WinUI.App" Executable="TestAjourEditor.exe">
+					<uap:FileOpenPicker>
+						<uap:SupportedFileTypes>
+							<uap:FileType>.rtf</uap:FileType>
+							<uap:FileType>.docx</uap:FileType>
+						</uap:SupportedFileTypes>
+					</uap:FileOpenPicker>
+				</uap:Extension>
+				<uap:Extension Category="windows.fileSavePicker" EntryPoint="TestAjourEditor.WinUI.App" Executable="TestAjourEditor.exe">
+					<uap:FileSavePicker>
+						<uap:SupportedFileTypes>
+							<uap:FileType>.rtf</uap:FileType>
+						</uap:SupportedFileTypes>
+					</uap:FileSavePicker>
+				</uap:Extension>
+			</Extensions>
 		</Application>
 	</Applications>
 
