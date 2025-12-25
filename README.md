@@ -45,6 +45,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 #### <ins>v1.8.86</ins>
 - App-to-App Deep Link support for opening documents from other apps, or from other instances within the same project. Currently supports the RTF file type. All known file types will be added gradually.<br />
 #### <ins>v1.8.91</ins>
+- Preliminary read .docx Office Open XML word processing documents.
 - Bug fixes and stability improvements based on initial user feedback.<br />
 <br />
 
@@ -85,6 +86,17 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 <Color x:Key="Greenish">#339933</Color>
 <System:String x:Key="DefaultFontFamily">OpenSansRegular</System:String>
 <System:String x:Key="ReporterFontFamily">OpenSansRegular</System:String>
+```
+
+#### <ins>MacCatalyst/Sandbox problems:</ins>
+```
+- One possibility might be to create a shortcut of the document folder on the desktop.
+- Una posibilidad podría ser crear un acceso directo a la carpeta de documentos en el escritorio.
+iCloud is closed:
+terminal % open /Users/admin/Library/Containers/no.ajourmedia.reporter/Data/Documents
+iCloud maybe sync:
+terminal % open ~/Library/Mobile\ Documents/iCloud~no~ajourmedia~reporter
+terminal % open ~/Library/Mobile\ Documents/iCloud~no~ajourmedia~storage
 ```
 
 
