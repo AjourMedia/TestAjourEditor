@@ -45,6 +45,8 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 #### <ins>v1.8.86</ins>
 - App-to-App Deep Link support for opening documents from other apps, or from other instances within the same project. Currently supports the RTF file type. All known file types will be added gradually.<br />
 #### <ins>v1.8.91</ins>
+- Preliminary read .docx Office Open XML word processing documents.
+#### <ins>v1.8.92</ins>
 - Bug fixes and stability improvements based on initial user feedback.<br />
 <br />
 
@@ -85,6 +87,17 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 <Color x:Key="Greenish">#339933</Color>
 <System:String x:Key="DefaultFontFamily">OpenSansRegular</System:String>
 <System:String x:Key="ReporterFontFamily">OpenSansRegular</System:String>
+```
+
+#### <ins>MacCatalyst/Sandbox problems:</ins>
+```
+- One possibility might be to create a shortcut of the document folder on the desktop.
+- Una posibilidad podría ser crear un acceso directo a la carpeta de documentos en el escritorio.
+iCloud is closed:
+terminal % open /Users/admin/Library/Containers/no.ajourmedia.reporter/Data/Documents
+iCloud maybe sync:
+terminal % open ~/Library/Mobile\ Documents/iCloud~no~ajourmedia~reporter
+terminal % open ~/Library/Mobile\ Documents/iCloud~no~ajourmedia~storage
 ```
 
 
@@ -165,19 +178,27 @@ XML
 UIRequiresFullScreen $${\color{orange} Deprecated}$$
 ```plist
 Info.plist
-<key>com.apple.security.assets.movies.read-only</key>
-<true/>
-<key>com.apple.security.assets.music.read-only</key>
-<true/>
-<key>com.apple.security.assets.pictures.read-only</key>
-<true/>
-<key>com.apple.security.files.downloads.read-only</key>
-<true/>
-<key>com.apple.security.personal-information.photos-library</key>
-<true/>
 <key>LSApplicationQueriesSchemes</key>
 <array>
 <string>mailto</string>
+<key>NSCameraUsageDescription</key>
+<string>Do you allow the app to take a picture?</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>SpeechToText requires microphone usage</string>
+<key>NSSpeechRecognitionUsageDescription</key>
+<string>SpeechToText requires speech recognition usage</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Do you allow the app to insert an image or video?</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Do you allow the app to insert an image or video?</string>
+<key>UISupportsDocumentBrowser</key>
+<true/>
+<key>NSExtensionActivationSupportsText</key>
+<true/>
+<key>UIFileSharingEnabled</key>
+<true/>
+<key>LSSupportsOpeningDocumentsInPlace</key>
+<true/>
 </array>
 ```
 
@@ -189,13 +210,39 @@ Info.plist
 <array>
 <integer>6</integer>
 </array>
+<key>UISupportsPrinting</key>
+<true/>
+<key>UIApplicationSupportsPrintCommand</key>
+<true/>
 ```
 
 
 ##### <ins>Mac Catalyst requirements:</ins>
 ```plist
 Entitlements.plist
+<key>com.apple.security.app-sandbox</key>
+<true/>
+<key>com.apple.security.network.client</key>
+<true/>
 <key>com.apple.security.files.user-selected.read-write</key>
+<true/>
+<key>com.apple.security.assets.movies.read-only</key>
+<true/>
+<key>com.apple.security.assets.music.read-only</key>
+<true/>
+<key>com.apple.security.assets.pictures.read-write</key>
+<true/>
+<key>com.apple.security.files.downloads.read-write</key>
+<true/>
+<key>com.apple.security.device.camera</key>
+<true/>
+<key>com.apple.security.personal-information.photos-library</key>
+<true/>
+<key>com.apple.security.device.audio-input</key>
+<true/>
+<key>com.apple.security.device.usb</key>
+<true/>
+<key>com.apple.security.print</key>
 <true/>
 ```
 

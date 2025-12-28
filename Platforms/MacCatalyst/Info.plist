@@ -11,7 +11,7 @@
 		<key>CFBundleShortVersionString</key>
 		<string>1.8</string>
 		<key>CFBundleVersion</key>
-		<string>91</string>
+		<string>92</string>
 		<key>CFBundleDevelopmentRegion</key>
 		<string>no</string>
 		<key>NSHumanReadableCopyright</key>
@@ -123,6 +123,10 @@
 		<array>
 			<string>fetch</string>
 		</array>
+		<key>UISupportsPrinting</key>
+		<true/>
+		<key>UIApplicationSupportsPrintCommand</key>
+		<true/>
 		<!-- iCloud container comes here -->
 	</dict>
 </plist>
