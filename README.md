@@ -1,6 +1,8 @@
-# ![Ajour Media](https://github.com/AjourMedia/TestAjourEditor/blob/master/logo64.png) Maui Cross platform Editor-library<br/>for HTML, XML and RTF.[^1]
+# ![Ajour Media](https://github.com/AjourMedia/TestAjourEditor/blob/master/logo64.png) Maui Cross platform Editor-library.[^1]
 
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
+
+## The main goal is similarity in working methods. To create the same recognizability and optimal production efficiency regardless of platform and devices.
 
 ### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
 
