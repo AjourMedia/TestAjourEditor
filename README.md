@@ -2,9 +2,9 @@
 
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
-## The main goal is similarity in working methods. To create the same recognizability and optimal production efficiency regardless of platform and devices.
+### The main goal is similarity in working methods. To create the same recognizability and optimal production efficiency regardless of platform and devices.
 
-### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
+#### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
 
 ###### <ins>Reporter:</ins> Text editor. Has two primary purposes. Ease of use and recognisability on all types of mobile and desktop devices on large or small monitors.
 ###### <ins>Text catalog:</ins> Your folder structure where you organize your different documents and which images and videos are linked to each of them.
