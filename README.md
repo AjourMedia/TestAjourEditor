@@ -2,7 +2,7 @@
 
 ## Editorial tool to produce articles and reportage for use in newspapers, online newspapers, TV or radio.
 
-### The main goal is similarity in working methods. To create the same recognizability and optimal production efficiency regardless of platform and devices.<br />Speech To Text is an effective method we prioritize, especially regarding typing on mobile phones.
+### The main goal is similarity in working methods. To create the same recognizability and optimal production efficiency regardless of platform and devices. Speech To Text is an effective method we prioritize, especially regarding typing on mobile phones.
 
 #### Supported platforms: Windows, MacOS, iOS and Android. Default languages: Norwegian, English y Español.
 
