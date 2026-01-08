@@ -48,7 +48,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - App-to-App Deep Link support for opening documents from other apps, or from other instances within the same project. Currently supports the RTF file type. All known file types will be added gradually.<br />
 #### <ins>v1.8.91</ins>
 - Preliminary read .docx Office Open XML word processing documents.
-#### <ins>v1.8.92</ins>
+#### <ins>v1.8.94</ins>
 - Bug fixes and stability improvements based on initial user feedback.<br />
 <br />
 
