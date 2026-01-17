@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using Ajour.EditorLib;
+using Syncfusion.Maui.Toolkit.Hosting;
 
 namespace TestAjourEditor
 {
@@ -13,6 +14,7 @@ namespace TestAjourEditor
                 .UseMauiApp<App>()
 				.UseMauiCommunityToolkit()
 				.UseMauiCommunityToolkitMediaElement()
+			    .ConfigureSyncfusionToolkit()
 				.ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

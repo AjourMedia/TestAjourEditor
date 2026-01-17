@@ -9,46 +9,66 @@
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<NoWarn>1701;1702;CS0168;CS0219;CS0414;CS1570;CS1587;CS8600;CS8602;CS8603;CS8604;CS8618;XC0103;XA0101</NoWarn>
 		<LangVersion>preview</LangVersion>
-		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<PlatformTarget>AnyCPU</PlatformTarget>
 
-		<!-- Versions -->
-		<Version>1.8.94</Version>
-		<ApplicationVersion>1</ApplicationVersion>
-
-		<!-- Product info -->
-		<RootNamespace>TestAjourEditor</RootNamespace>
-		<ApplicationTitle>TestAjourEditor</ApplicationTitle>
-		<ApplicationIcon>app.ico</ApplicationIcon>
-		<Title>TestAjourEditor</Title>
-		<Authors>Ajour Media Team</Authors>
-		<Company>Ajour Media AS</Company>
-		<Product>Ajour.EditorLib</Product>
-		<Description>Redaksjonelt verktøy for å produsere artikler og reportasjer til bruk i aviser, nettaviser, TV eller radio.</Description>
-		<Copyright>© 1991 - 2025 Ajour Media AS. With all rights.</Copyright>
-		<PackageProjectUrl>https://www.ajourmedia.no</PackageProjectUrl>
-		<PackageTags>journalistikk verktøy; reportasje verktøy; avispublisering verktøy; redaksjonelt program; mediaproduksjon programvare; nettavis redaksjonell programvare; artikkel produksjon</PackageTags>
-		<PackageReleaseNotes></PackageReleaseNotes>
-
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">18.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">18.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">29.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">31.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.22621.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.22621.0</TargetPlatformMinVersion>
 	</PropertyGroup>
 
+	<!-- Product info -->
+	<PropertyGroup>
+		<Title>Ajour Editor</Title>
+		<ApplicationTitle>$(Title)</ApplicationTitle>
+		<Product>$(Title)</Product>
+		<PackageProjectUrl>https://www.ajourmedia.no</PackageProjectUrl>
+		<PackageReleaseNotes>[17. nov 2025] Now available using .NET 10. iPhone/iPad 17 26.2, MacOS Tahoe 26.2, Android 16.0 Baklava 36.1 16KB, Windows 11 v26100.</PackageReleaseNotes>
+		<Copyright>© 1991 - 2026 Ajour Media AS. With all rights.</Copyright>
+		<Company>Ajour Media AS</Company>
+		<Authors>Ajour Media Team</Authors>
+		<Description>Redaksjonelt verktøy for å produsere artikler og reportasjer til bruk i aviser, nettaviser, TV eller radio.</Description>
+		<ApplicationIcon>app.ico</ApplicationIcon>
+		<PackageIcon>ajour_logo.png</PackageIcon>
+		<PackageTags>journalistikk verktøy; reportasje verktøy; avispublisering verktøy; redaksjonelt program; mediaproduksjon programvare; nettavis redaksjonell programvare; artikkel produksjon</PackageTags>
+	</PropertyGroup>
+
+	<!-- App Identifier -->
+	<PropertyGroup>
+		<RootNamespace>TestAjourEditor</RootNamespace>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>preview</AnalysisLevel>
+		<Version>1.8.110</Version>
+		<ApplicationVersion>1</ApplicationVersion>
+		<ApplicationDisplayVersion>$(Version)</ApplicationDisplayVersion>
+		<NoWarn>1701;1702;CS0168;CS0219;CS0414;CS1570;CS1587;CS8600;CS8602;CS8603;CS8604;CS8618;XC0103;XA0101;CS1591</NoWarn>
+		<DefineConstants>$(DefineConstants);MAUIAPP</DefineConstants>
+		<NeutralLanguage>en</NeutralLanguage>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="ajour_logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="app.ico" />
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" ForegroundScale="0.65" Color="#FFFFFF" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" BaseSize="384,384" Color="#FFFFFF" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+		<!-- <MauiImage Include="Resources\Images\**\*" /> -->
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -58,16 +78,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Ajour.EditorLib" Version="1.8.94" />
+		<PackageReference Include="Ajour.EditorLib" Version="1.8.110" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.30" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="13.0.0" />
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.20" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Syncfusion.Maui.Toolkit" Version="1.0.8" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-android'">

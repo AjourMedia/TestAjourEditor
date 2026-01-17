@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="no.ajourmedia.TestAjourEditor" android:versionName="1.8" android:versionCode="94">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="no.ajourmedia.TestAjourEditor" android:versionName="1.8" android:versionCode="110">
 	<application android:icon="@mipmap/appicon" android:theme="@style/Theme.AppCompat.Light" android:label="TestAjourEditor">
 		<!--
 		<activity android:name=".FileLauncher" android:exported="true">

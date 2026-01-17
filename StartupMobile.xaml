@@ -6,7 +6,6 @@
 	x:Name="shell"
     xmlns:views="clr-namespace:TestAjourEditor.Views"
     Shell.FlyoutBehavior="Disabled"
-	BackgroundColor="{StaticResource editor_background}"
 	>
 	<TabBar>
 		<Tab>
