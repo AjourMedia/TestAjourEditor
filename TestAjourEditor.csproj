@@ -25,7 +25,7 @@
 		<ApplicationTitle>$(Title)</ApplicationTitle>
 		<Product>$(Title)</Product>
 		<PackageProjectUrl>https://www.ajourmedia.no</PackageProjectUrl>
-		<PackageReleaseNotes>[17. nov 2025] Now available using .NET 10. iPhone/iPad 17 26.2, MacOS Tahoe 26.2, Android 16.0 Baklava 36.1 16KB, Windows 11 v26100.</PackageReleaseNotes>
+		<PackageReleaseNotes>[31. mar 2026] MAUI 10.0.201, Mono 10.0.5, iOS 26.2.10217, MacOS 26.2.10217, Android 36.1.43 16KB, Windows 10.0.26100.</PackageReleaseNotes>
 		<Copyright>© 1991 - 2026 Ajour Media AS. With all rights.</Copyright>
 		<Company>Ajour Media AS</Company>
 		<Authors>Ajour Media Team</Authors>
@@ -40,7 +40,7 @@
 		<RootNamespace>TestAjourEditor</RootNamespace>
 		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 		<AnalysisLevel>preview</AnalysisLevel>
-		<Version>1.8.110</Version>
+		<Version>2.0.2</Version>
 		<ApplicationVersion>1</ApplicationVersion>
 		<ApplicationDisplayVersion>$(Version)</ApplicationDisplayVersion>
 		<NoWarn>1701;1702;CS0168;CS0219;CS0414;CS1570;CS1587;CS8600;CS8602;CS8603;CS8604;CS8618;XC0103;XA0101;CS1591</NoWarn>
@@ -78,45 +78,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Ajour.EditorLib" Version="1.8.110" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.30" />
-		<PackageReference Include="CommunityToolkit.Maui" Version="13.0.0" />
-		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="7.0.0" />
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.2" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.2" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.2" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.2" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.2" />
-		<PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Syncfusion.Maui.Toolkit" Version="1.0.8" />
+		<PackageReference Include="Ajour.EditorLib" Version="2.0.2" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.51" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="14.0.1" />
+		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="8.0.1" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.5" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-android'">
 		<RuntimeIdentifier>android-arm64</RuntimeIdentifier>
 		<AndroidManifestApplicationPackageName>no.ajourmedia.TestAjourEditor</AndroidManifestApplicationPackageName>
 		<JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-		<EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-ios'">
-		<!--<RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>-->
-		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+		<RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>
+		<!--<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>-->
 		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
-		<ProvisioningType>manual</ProvisioningType>
-		<CodesignKey>Apple Development: Created via API (AYNJKDV998)</CodesignKey>
-		<CodesignProvision>TestAjourEditor - iOS Dev</CodesignProvision>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-maccatalyst'">
 		<RuntimeIdentifier>maccatalyst-x64</RuntimeIdentifier>
 		<CodesignEntitlements>Platforms\MacCatalyst\Entitlements.plist</CodesignEntitlements>
-		<ProvisioningType>manual</ProvisioningType>
-		<CodesignKey>Apple Development: Created via API (AYNJKDV998)</CodesignKey>
-		<CodesignProvision>TestAjourEditor - Mac Dev</CodesignProvision>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
@@ -130,11 +119,6 @@
 		<WindowsPackageType>None</WindowsPackageType>
 		<PublishSingleFile>True</PublishSingleFile>
 		<SelfContained>True</SelfContained>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-		<_MauiForceXamlCForDebug>true</_MauiForceXamlCForDebug>
-		<MtouchLink>None</MtouchLink>
 	</PropertyGroup>
 
 </Project>

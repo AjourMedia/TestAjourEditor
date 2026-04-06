@@ -5,8 +5,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:System="clr-namespace:System;assembly=mscorlib"
 	xmlns:f="clr-namespace:Fonts;assembly=TestAjourEditor"
-    xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
-    xmlns:pullToRefresh="clr-namespace:Syncfusion.Maui.Toolkit.PullToRefresh;assembly=Syncfusion.Maui.Toolkit"
     >
 
 	<System:String x:Key="DefaultFontFamily">OpenSansRegular</System:String>
@@ -271,26 +269,11 @@
 		<Setter Property="Padding" Value="{OnIdiom 15, Desktop=20}"/>
 	</Style>
 
-	<sf:LabelStyle x:Key="lightThemeLabelStyle" TextColor="{StaticResource DarkOnLightBackground}" FontSize="{OnIdiom 18, Desktop=24}"/>
-	<sf:LabelStyle x:Key="darkThemeLabelStyle" TextColor="{StaticResource LightOnDarkBackground}" FontSize="{OnIdiom 18, Desktop=24}"/>
-	<Style TargetType="sf:SfTextInputLayout">
-		<Setter Property="ContainerType" Value="Outlined"/>
-		<Setter Property="ContainerBackground" Value="Transparent"/>
-		<Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"/>
-		<Setter Property="HintLabelStyle" Value="{AppThemeBinding Light={StaticResource lightThemeLabelStyle}, Dark={StaticResource darkThemeLabelStyle}}"/>
-	</Style>
-
 
 	<Style TargetType="BoxView" x:Key="ShimmerCustomViewStyle">
 		<Setter Property="BackgroundColor" Value="Gray" />
 		<Setter Property="HorizontalOptions" Value="Fill" />
 		<Setter Property="VerticalOptions" Value="Center" />
-	</Style>
-
-	<Style TargetType="pullToRefresh:SfPullToRefresh">
-		<Setter Property="TransitionMode" Value="SlideOnTop"/>
-		<Setter Property="PullingThreshold" Value="100"/>
-		<Setter Property="ProgressColor" Value="{StaticResource Primary}"/>
 	</Style>
 
 </ResourceDictionary>
