@@ -14,11 +14,11 @@
 #### <ins>TODO:</ins>
 Xcode Version **26.2** (17C52)<br />
 Xcode->Settings->Components:<br />
-Verify installed = macOS 26.2 (25C57) SDK (Built-in)<br />
-If not installed, install iOS 26.2 (**23C53**) SDK + iOS 26.2 (**23C54**) Simulator.<br />
-Android simulator API **36.1**, arm64 v8a, **16KB** Page Size.<br />
-Mac> sudo dotnet workload update (verify SDK 10.0.100)<br />
-Windows> dotnet workload update (verify SDK 10.0.100)<br />
+Verify installed = macOS 26.2 (25C58) SDK (Built-in)<br />
+If not installed, install iOS 26.2 (**25C58**) SDK + iOS 26.2 (23C57) SDK + iOS 26.3.1 (**23D8133**) Simulator.<br />
+Android simulator API **36.1.43**, arm64 v8a, **16KB** Page Size.<br />
+Mac> sudo dotnet workload update (verify SDK 10.0.201)<br />
+Windows> dotnet workload update (verify SDK 10.0.201)<br />
 Mac> open /Users/admin/Library/Caches/Xamarin (**Obsolete**)<br />
 Mac> open /Users/admin/Library/Caches/maui (**new location** .NET 10.0)<br />
 Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajour.EditorLib.nupkg**)<br />
@@ -48,7 +48,7 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - App-to-App Deep Link support for opening documents from other apps, or from other instances within the same project. Currently supports the RTF file type. All known file types will be added gradually.<br />
 #### <ins>v1.8.91</ins>
 - Preliminary read .docx Office Open XML word processing documents.
-#### <ins>v1.8.110</ins>
+#### <ins>v2.0.2</ins>
 - Bug fixes and stability improvements based on initial user feedback.<br />
 <br />
 
@@ -190,7 +190,7 @@ Info.plist
 <key>NSSpeechRecognitionUsageDescription</key>
 <string>SpeechToText requires speech recognition usage</string>
 <key>NSPhotoLibraryAddUsageDescription</key>
-<string>Do you allow the app to insert an image or video?</string>
+<string>PhotosAddOnly</string>
 <key>NSPhotoLibraryUsageDescription</key>
 <string>Do you allow the app to insert an image or video?</string>
 <key>UISupportsDocumentBrowser</key>
@@ -228,21 +228,9 @@ Entitlements.plist
 <true/>
 <key>com.apple.security.files.user-selected.read-write</key>
 <true/>
-<key>com.apple.security.assets.movies.read-only</key>
-<true/>
-<key>com.apple.security.assets.music.read-only</key>
-<true/>
-<key>com.apple.security.assets.pictures.read-write</key>
-<true/>
-<key>com.apple.security.files.downloads.read-write</key>
-<true/>
 <key>com.apple.security.device.camera</key>
 <true/>
-<key>com.apple.security.personal-information.photos-library</key>
-<true/>
 <key>com.apple.security.device.audio-input</key>
-<true/>
-<key>com.apple.security.device.usb</key>
 <true/>
 <key>com.apple.security.print</key>
 <true/>
