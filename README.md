@@ -50,6 +50,8 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Preliminary read .docx Office Open XML word processing documents.
 #### <ins>v2.0.2</ins>
 - Bug fixes and stability improvements based on initial user feedback.<br />
+#### <ins>v2.0.42</ins>
+- Speech To Text support. Implemented for iOS.<br />
 <br />
 
 ##### <ins>Windows 11</ins>
