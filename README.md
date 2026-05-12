@@ -12,13 +12,13 @@
 ###### <ins>Planner:</ins> Advanced graphic tools to produce layout for publishing to multiple publishing channels, pdf, rtf, html, social media and different types of xml formatting adapted to the editorial team you are associated with.
 
 #### <ins>TODO:</ins>
-Xcode Version **26.2** (17C52)<br />
+Xcode Version **26.4.1** (17E202)<br />
 Xcode->Settings->Components:<br />
-Verify installed = macOS 26.2 (25C58) SDK (Built-in)<br />
-If not installed, install iOS 26.2 (**25C58**) SDK + iOS 26.2 (23C57) SDK + iOS 26.3.1 (**23D8133**) Simulator.<br />
-Android simulator API **36.1.43**, arm64 v8a, **16KB** Page Size.<br />
-Mac> sudo dotnet workload update (verify SDK 10.0.201)<br />
-Windows> dotnet workload update (verify SDK 10.0.201)<br />
+Verify installed = macOS 26.4.1 (**25E251**) SDK (Built-in)<br />
+If not installed, install iOS 26.4.1 (**23E252**) SDK + iOS 26.4.1 (**23E254a**) Simulator.<br />
+Android simulator API **36.1.53**, arm64 v8a, **16KB** Page Size.<br />
+Mac> sudo dotnet workload update (verify MAUI **10.0.203.1**)<br />
+Windows> dotnet workload update (verify MAUI **10.0.203.1**)<br />
 Mac> open /Users/admin/Library/Caches/Xamarin (**Obsolete**)<br />
 Mac> open /Users/admin/Library/Caches/maui (**new location** .NET 10.0)<br />
 Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajour.EditorLib.nupkg**)<br />
@@ -37,21 +37,23 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Touch and mouse input support for text editing.<br />
 - Basic text navigation using arrow keys, page up/down, home/end, and mouse clicks.
 - Basic error handling for file operations and unsupported formats.<br />
-- Preliminary localization support for English, Spanish and Norwegian languages.<br />
+- Localization support for English, Spanish and Norwegian languages.<br />
 - Basic user interface with toolbar buttons for common actions.<br />
 #### <ins>v1.8.63</ins>
 - Copy, cut, and paste text within the document.<br />
 #### <ins>v1.8.65</ins>
-- Preliminary Undo and redo text changes.<br />
+- Undo and redo text changes.<br />
 - Localization support for English, Spanish and Norwegian languages.<br />
 #### <ins>v1.8.86</ins>
 - App-to-App Deep Link support for opening documents from other apps, or from other instances within the same project. Currently supports the RTF file type. All known file types will be added gradually.<br />
 #### <ins>v1.8.91</ins>
-- Preliminary read .docx Office Open XML word processing documents.
+- Read .docx Office Open XML word processing documents.
 #### <ins>v2.0.2</ins>
 - Bug fixes and stability improvements based on initial user feedback.<br />
 #### <ins>v2.0.42</ins>
-- Speech To Text support. Implemented for iOS.<br />
+- Preliminary Speech To Text support. Implemented for iOS.<br />
+#### <ins>v2.0.50</ins>
+- Speech To Text support. Implemented for all platforms.<br />
 <br />
 
 ##### <ins>Windows 11</ins>
@@ -105,7 +107,7 @@ terminal % open ~/Library/Mobile\ Documents/iCloud~no~ajourmedia~storage
 ```
 
 
-[^1]: Copyright © 1991 - 2025 Ajour Media AS.
+[^1]: Copyright © 1991 - 2026 Ajour Media AS.
 
 ##### <ins>MauiProgram.cs setup:</ins>
 ```cs
