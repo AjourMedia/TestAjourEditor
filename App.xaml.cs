@@ -1,4 +1,6 @@
-﻿namespace TestAjourEditor
+﻿using Ajour.EditorLib.ViewModels;
+
+namespace TestAjourEditor
 {
     public partial class App : Application
     {
@@ -12,24 +14,34 @@
 
 		protected override Window CreateWindow(IActivationState? activationState)
 		{
-			if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
-				DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
+			Window? window = null;
+			/* optional
+			if (DeviceInfo.Current.Idiom == DeviceIdiom.Desktop)
 			{
-				Window? window = null;
 				if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
 				{
 					window = services?.GetService<AppTitleWinUI>()!;
-					window.Page = new StartupWinUI();
+					window.Page = new AppShell();
 				}
-				else
+				else if (DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
 				{
-					window = services?.GetService<AppTitleCatalyst>()!;
-					window.Page = new StartupCatalyst();
+					window = Microsoft.Maui.Controls.Application.Current?.Handler.GetService<AppTitleCatalyst>()!;
+					window.Page = new AppShell();
 				}
-				window.Created += (sender, args) =>
+			}
+			else
+			*/
+			{
+				window = new Window(new AppShell());
+			}
+			
+			window.Created += (sender, args) =>
+			{
+				if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
+					DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
 				{
-					Window? window = sender as Window;
-					if (window != null)
+					Window? win = sender as Window;
+					if (win != null)
 					{
 						string? position = Microsoft.Maui.Storage.Preferences.Get("Position", null);
 						if (position != null)
@@ -40,63 +52,39 @@
 								new Size(Convert.ToDouble(array[2]), Convert.ToDouble(array[3])));
 							if (bounds.Width > 0 && bounds.Height > 0)
 							{
-								window.X = bounds.Left;
-								window.Y = bounds.Top;
-								window.Width = bounds.Width;
-								window.Height = bounds.Height;
+								win.X = bounds.Left;
+								win.Y = bounds.Top;
+								win.Width = bounds.Width;
+								win.Height = bounds.Height;
 							}
 						}
 					}
-				};
-				window.Destroying += (sender, args) =>
+				}
+
+				AjourEditorViewModel viewModel = Microsoft.Maui.Controls.Application.Current.Handler.GetService<AjourEditorViewModel>();
+				viewModel.m_email_to = "post@ajourpanorama.com";
+				viewModel.m_subject_to = "A message to Ajour Media/Morten Ellingsen";
+			};
+			
+			window.Destroying += (sender, args) =>
+			{
+				if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
+					DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
 				{
-					Window? window = sender as Window;
-					if (window != null)
+					Window? win = sender as Window;
+					if (win != null)
 					{
 						string position = String.Format("{0};{1};{2};{3}",
-							Convert.ToInt32(window.X),
-							Convert.ToInt32(window.Y),
-							Convert.ToInt32(window.Width),
-							Convert.ToInt32(window.Height));
+							Convert.ToInt32(win.X),
+							Convert.ToInt32(win.Y),
+							Convert.ToInt32(win.Width),
+							Convert.ToInt32(win.Height));
 						Microsoft.Maui.Storage.Preferences.Set("Position", position);
 					}
-				};
-				return window;
-			}
-			else
-			{
-				return new Window(new StartupMobile());
-			}
-		}
-
-
-		/// <summary>
-		/// App-to-App Deep Link support. Imports registered file types: 
-		/// - from operating system to the app.
-		/// - from other apps to the app.
-		/// - from other instances within the same app.
-		/// </summary>
-		protected override async void OnAppLinkRequestReceived(Uri uri)
-		{
-			base.OnAppLinkRequestReceived(uri);
-
-			await Dispatcher.DispatchAsync(async () =>
-			{
-				try
-				{
-					// Application.Current.SendOnAppLinkRequestReceived(Uri uri) method.
-					// The Application.Current.SendOnAppLinkRequestReceived method is part
-					// of the Microsoft.Maui.Controls namespace and is used to send an
-					// app link request to this application.
-
-					if (uri.IsFile)
-					{
-						var ajourEditorViewModel = Microsoft.Maui.Controls.Application.Current.Handler.GetService<Ajour.EditorLib.ViewModels.AjourEditorViewModel>();
-						ajourEditorViewModel.ExecuteDeepLinkingCommand.Execute(uri.LocalPath);
-					}
 				}
-				catch { }
-			});
+			};
+			
+			return window;
 		}
 	}
 }

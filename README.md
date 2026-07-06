@@ -12,13 +12,13 @@
 ###### <ins>Planner:</ins> Advanced graphic tools to produce layout for publishing to multiple publishing channels, pdf, rtf, html, social media and different types of xml formatting adapted to the editorial team you are associated with.
 
 #### <ins>TODO:</ins>
-Xcode Version **26.4.1** (17E202)<br />
+Xcode Version **26.5** (17F42)<br />
 Xcode->Settings->Components:<br />
-Verify installed = macOS 26.4.1 (**25E251**) SDK (Built-in)<br />
-If not installed, install iOS 26.4.1 (**23E252**) SDK + iOS 26.4.1 (**23E254a**) Simulator.<br />
-Android simulator API **36.1.53**, arm64 v8a, **16KB** Page Size.<br />
-Mac> sudo dotnet workload update (verify MAUI **10.0.203.1**)<br />
-Windows> dotnet workload update (verify MAUI **10.0.203.1**)<br />
+Verify installed = macOS 26.5 (**25F70**) SDK (Built-in)<br />
+If not installed, install iOS 26.5 (**23F73**) SDK + iOS 26.5 (23F77) Simulator.<br />
+Android simulator API **36.1.69**, arm64 v8a, **16KB** Page Size.<br />
+Mac> sudo dotnet workload update (verify MAUI **10.0.301**)<br />
+Windows> dotnet workload update (verify MAUI **10.0.301.1**)<br />
 Mac> open /Users/admin/Library/Caches/Xamarin (**Obsolete**)<br />
 Mac> open /Users/admin/Library/Caches/maui (**new location** .NET 10.0)<br />
 Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajour.EditorLib.nupkg**)<br />
@@ -54,6 +54,16 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Preliminary Speech To Text support. Implemented for iOS.<br />
 #### <ins>v2.0.50</ins>
 - Speech To Text support. Implemented for all platforms.<br />
+#### <ins>v2.1.0</ins>
+- Cut, copy and paste improvements.<br />
+- Edit text improvements.<br />
+- Text styles improvements.<br />
+#### <ins>v3.0.300</ins>
+- Insert image into text.<br />
+- Send email with picture.<br />
+- Printing with photos.<br />
+- Speech To Text all platforms.<br />
+- Fixed Sandbox problems.<br />
 <br />
 
 ##### <ins>Windows 11</ins>
@@ -94,18 +104,6 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 <System:String x:Key="DefaultFontFamily">OpenSansRegular</System:String>
 <System:String x:Key="ReporterFontFamily">OpenSansRegular</System:String>
 ```
-
-#### <ins>MacCatalyst/Sandbox problems:</ins>
-```
-- One possibility might be to create a shortcut of the document folder on the desktop.
-- Una posibilidad podría ser crear un acceso directo a la carpeta de documentos en el escritorio.
-iCloud is closed:
-terminal % open /Users/admin/Library/Containers/no.ajourmedia.reporter/Data/Documents
-iCloud maybe sync:
-terminal % open ~/Library/Mobile\ Documents/iCloud~no~ajourmedia~reporter
-terminal % open ~/Library/Mobile\ Documents/iCloud~no~ajourmedia~storage
-```
-
 
 [^1]: Copyright © 1991 - 2026 Ajour Media AS.
 
@@ -161,15 +159,8 @@ namespace TestAjourEditor
 ##### <ins>Android requirements:</ins>
 ```xhtml
 XML
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="34" />
-<!-- Required only if your app needs to access images or photos that other apps created -->
+<!-- Required for printer and email -->
 <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-<!-- Required only if your app needs to access videos that other apps created -->
-<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-<!-- Required only if your app needs to access audio files that other apps created -->
-<uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
 <queries>
 <intent>
 <action android:name="android.media.action.IMAGE_CAPTURE" />
@@ -187,8 +178,6 @@ Info.plist
 <key>LSApplicationQueriesSchemes</key>
 <array>
 <string>mailto</string>
-<key>NSCameraUsageDescription</key>
-<string>Do you allow the app to take a picture?</string>
 <key>NSMicrophoneUsageDescription</key>
 <string>SpeechToText requires microphone usage</string>
 <key>NSSpeechRecognitionUsageDescription</key>
@@ -196,14 +185,16 @@ Info.plist
 <key>NSPhotoLibraryAddUsageDescription</key>
 <string>PhotosAddOnly</string>
 <key>NSPhotoLibraryUsageDescription</key>
-<string>Do you allow the app to insert an image or video?</string>
+<string>This app needs access to your photo library to attach images to emails.</string>
+<key>NSDocumentsFolderUsageDescription</key>
+<string>This app needs access to your documents to attach files to emails.</string>
 <key>UISupportsDocumentBrowser</key>
+<true/>
+<key>LSSupportsOpeningDocumentsInPlace</key>
 <true/>
 <key>NSExtensionActivationSupportsText</key>
 <true/>
 <key>UIFileSharingEnabled</key>
-<true/>
-<key>LSSupportsOpeningDocumentsInPlace</key>
 <true/>
 </array>
 ```
@@ -241,120 +232,9 @@ Entitlements.plist
 ```
 
 
-##### <ins>Windows requirements:</ins>
-```
->= SDK-version 10.0.22621.0
-- No setup is required for debugging.
-```
-
-##### <ins>Optional: MacCatalyst and Windows</ins>
+##### <ins>App-to-App Deep Link support.</ins>
 ```cs
-#if MACCATALYST
-builder.Services.AddSingleton<AppTitleCatalyst>();
-#endif
-#if WINDOWS10_0_22621_0_OR_GREATER
-builder.Services.AddSingleton<AppTitleWinUI>();
-#endif
-builder.Services.AddSingleton<ReporterPage, ReporterViewModel>();
-
-private readonly IServiceProvider? services;
-public App(IServiceProvider services)
-{
-    InitializeComponent();
-	this.services = services.GetService<IServiceProvider>();
-}
-
-protected override Window CreateWindow(IActivationState? activationState)
-{
-	if (DeviceInfo.Current.Platform == DevicePlatform.WinUI ||
-		DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst)
-	{
-		Window? window = null;
-		if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
-		{
-			window = services?.GetService<AppTitleWinUI>()!;
-			window.Page = new StartupWinUI();
-		}
-		else
-		{
-			window = services?.GetService<AppTitleCatalyst>()!;
-			window.Page = new StartupCatalyst();
-		}
-		window.Created += (sender, args) =>
-		{
-			Window? window = sender as Window;
-			if (window != null)
-			{
-				string? position = Microsoft.Maui.Storage.Preferences.Get("Position", null);
-				if (position != null)
-				{
-					string[] array = position.Split(";".ToCharArray());
-					var bounds = new Rect(
-						new Point(Convert.ToDouble(array[0]), Convert.ToDouble(array[1])),
-						new Size(Convert.ToDouble(array[2]), Convert.ToDouble(array[3])));
-					if (bounds.Width > 0 && bounds.Height > 0)
-					{
-						window.X = bounds.Left;
-						window.Y = bounds.Top;
-						window.Width = bounds.Width;
-						window.Height = bounds.Height;
-					}
-				}
-			}
-		};
-		window.Destroying += (sender, args) =>
-		{
-			Window? window = sender as Window;
-			if (window != null)
-			{
-				string position = String.Format("{0};{1};{2};{3}",
-					Convert.ToInt32(window.X),
-					Convert.ToInt32(window.Y),
-					Convert.ToInt32(window.Width),
-					Convert.ToInt32(window.Height));
-				Microsoft.Maui.Storage.Preferences.Set("Position", position);
-			}
-		};
-		return window;
-	}
-	else
-	{
-		return new Window(new StartupMobile());
-	}
-}
-```
-
-
-##### <ins>App.xaml.cs: App-to-App Deep Link support.</ins>
-```cs
-/// <summary>
-/// App-to-App Deep Link support. Imports registered file types: 
-/// - from operating system to the app.
-/// - from other apps to the app.
-/// - from other instances within the same app.
-/// </summary>
-protected override async void OnAppLinkRequestReceived(Uri uri)
-{
-	base.OnAppLinkRequestReceived(uri);
-
-	await Dispatcher.DispatchAsync(async () =>
-	{
-		try
-		{
-			// Application.Current.SendOnAppLinkRequestReceived(Uri uri) method.
-			// The Application.Current.SendOnAppLinkRequestReceived method is part
-			// of the Microsoft.Maui.Controls namespace and is used to send an
-			// app link request to this application.
-
-			if (uri.IsFile)
-			{
-				var ajourEditorViewModel = Microsoft.Maui.Controls.Application.Current.Handler.GetService<Ajour.EditorLib.ViewModels.AjourEditorViewModel>();
-				ajourEditorViewModel.ExecuteDeepLinkingCommand.Execute(uri.LocalPath);
-			}
-		}
-		catch { }
-	});
-}
+Now implemented automatically. No further action required.
 ```
 
 ##### <ins>Android: App-to-App Deep Link support.</ins>
@@ -364,7 +244,6 @@ protected override async void OnAppLinkRequestReceived(Uri uri)
 	<intent-filter>
 		<action android:name="android.intent.action.VIEW" />
 		<category android:name="android.intent.category.DEFAULT" />
-		<data android:scheme="file" />
 		<data android:scheme="content" />
 		<data android:host="*" />
 		<data android:pathPattern=".*\\.rtf" />
