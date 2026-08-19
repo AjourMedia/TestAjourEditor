@@ -64,6 +64,16 @@ Mac> open /usr/local/share/dotnet/library-packs <br />(local store to put **Ajou
 - Printing with photos.<br />
 - Speech To Text all platforms.<br />
 - Fixed Sandbox problems.<br />
+#### <ins>v3.0.311</ins>
+- Fixed Speech To Text gives up too early.<br />
+#### <ins>v3.0.312</ins>
+- Fixed A4 margins may disappear under certain conditions.<br />
+#### <ins>v3.0.316</ins>
+- Fixed Speech To Text refresh problem on some devices.<br />
+#### <ins>v3.0.317</ins>
+- Fixed .docx problem.<br />
+#### <ins>v3.1.321</ins>
+- Bug fixes and stability improvements based on initial user feedback.<br />
 <br />
 
 ##### <ins>Windows 11</ins>

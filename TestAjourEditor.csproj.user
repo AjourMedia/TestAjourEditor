@@ -3,9 +3,9 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net10.0-ios</ActiveDebugFramework>
-    <ActiveDebugProfile>iPad (A16) iOS 26.5</ActiveDebugProfile>
+    <ActiveDebugProfile>iPad Air 13-inch (M4) iOS 26.5</ActiveDebugProfile>
     <SelectedPlatformGroup>Simulator</SelectedPlatformGroup>
-    <DefaultDevice>iPad (A16) iOS 26.5</DefaultDevice>
+    <DefaultDevice>iPad Air 13-inch (M4) iOS 26.5</DefaultDevice>
     <TargetiOSDevice>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;

@@ -9,19 +9,31 @@
 		<key>CFBundleIdentifier</key>
 		<string>no.ajourmedia.TestAjourEditor</string>
 		<key>CFBundleShortVersionString</key>
-		<string>2.0</string>
+		<string>3.1</string>
 		<key>CFBundleVersion</key>
-		<string>42</string>
+		<string>321</string>
+		<!-- https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/localization?view=net-maui-10.0 -->
+		<key>CFBundleLocalizations</key>
+		<array>
+			<string>no</string>
+			<string>es</string>
+			<string>en</string>
+		</array>
 		<key>CFBundleDevelopmentRegion</key>
-		<string>no</string>
+		<string>en</string>
 		<key>NSHumanReadableCopyright</key>
 		<string>Ajour Media © 1991-2025</string>
+		<key>LSApplicationCategoryType</key>
+		<string>public.app-category.utilities</string>
+
 		<key>UIDeviceFamily</key>
 		<array>
 			<integer>6</integer>
 		</array>
+
 		<key>XSAppIconAssets</key>
 		<string>Assets.xcassets/appicon.appiconset</string>
+
 		<key>NSAppTransportSecurity</key>
 		<dict>
 			<key>NSAllowsArbitraryLoads</key>
@@ -29,28 +41,28 @@
 		</dict>
 		<key>ITSAppUsesNonExemptEncryption</key>
 		<false/>
-		<key>LSApplicationQueriesSchemes</key>
-		<array>
-			<string>mailto</string>
-		</array>
-		<key>NSCameraUsageDescription</key>
-		<string>Do you allow the app to take a picture?</string>
-		<key>NSMicrophoneUsageDescription</key>
-		<string>SpeechToText requires microphone usage</string>
-		<key>NSSpeechRecognitionUsageDescription</key>
-		<string>SpeechToText requires speech recognition usage</string>
-		<key>NSPhotoLibraryAddUsageDescription</key>
-		<string>Do you allow the app to insert an image or video?</string>
+
 		<key>NSPhotoLibraryUsageDescription</key>
-		<string>Do you allow the app to insert an image or video?</string>
+		<string>This app requires access to your photo library to allow you to select images to attach to documents, printouts with images, email messages with image attachments.</string>
+
+		<!-- Used in MacOS applications to request access to the user's Documents folder. -->
+		<key>NSDocumentsFolderUsageDescription</key>
+		<string>This app needs access to your Documents folder to save and load text files.</string>
+
+		<key>NSMicrophoneUsageDescription</key>
+		<string>The Speech To Text feature requires microphone usage. Do you want to enable Speech To Text to enter texts into the document?</string>
+		<key>NSSpeechRecognitionUsageDescription</key>
+		<string>SpeechToText requires speech recognition usage. Do you want to enable Speech To Text to enter texts into the document?</string>
+
 		<key>UISupportsDocumentBrowser</key>
+		<true/>
+		<key>LSSupportsOpeningDocumentsInPlace</key>
 		<true/>
 		<key>NSExtensionActivationSupportsText</key>
 		<true/>
 		<key>UIFileSharingEnabled</key>
 		<true/>
-		<key>LSSupportsOpeningDocumentsInPlace</key>
-		<true/>
+
 		<key>CFBundleDocumentTypes</key>
 		<array>
 			<dict>
@@ -63,7 +75,7 @@
 				<key>CFBundleTypeRole</key>
 				<string>Editor</string>
 				<key>LSHandlerRank</key>
-				<string>Alternate</string>
+				<string>Owner</string>
 			</dict>
 			<dict>
 				<key>CFBundleTypeName</key>
@@ -78,6 +90,7 @@
 				<string>Alternate</string>
 			</dict>
 		</array>
+
 		<key>UTImportedTypeDeclarations</key>
 		<array>
 			<dict>
@@ -88,12 +101,28 @@
 				<key>UTTypeConformsTo</key>
 				<array>
 					<string>public.text</string>
+					<string>public.content</string>
 				</array>
-				<key>UTTypeSize64IconFile</key>
-				<string>logo44</string>
-				<key>UTTypeSize320IconFile</key>
-				<string>logo64</string>
+
+				<key>UTTypeTagSpecification</key>
+				<dict>
+					<key>public.filename-extension</key>
+					<array>
+						<string>rtf</string>
+					</array>
+					<key>public.mime-type</key>
+					<string>text/rtf</string>
+				</dict>
+
+				<!-- On macOS: Use .icns format, place in the app bundle’s Resources folder. -->
+				<!-- On iOS: Use .png (or PDF for vector), also in Resources. -->
+				<!-- No extension in UTTypeIconFile — just the base name. -->
+				<key>UTTypeIconFiles</key>
+				<array>
+					<string>appicon</string>
+				</array>
 			</dict>
+
 			<dict>
 				<key>UTTypeDescription</key>
 				<string>Office Open XML word processing document</string>
@@ -103,7 +132,11 @@
 				<array>
 					<string>org.openxmlformats.openxml</string>
 					<string>public.composite-content</string>
+					<string>public.content</string>
+					<string>public.data</string>
 				</array>
+
+				<!-- optional -->
 				<key>UTTypeTagSpecification</key>
 				<dict>
 					<key>public.filename-extension</key>
@@ -115,18 +148,19 @@
 						<string>application/vnd.openxmlformats-officedocument.wordprocessingml.document</string>
 					</array>
 				</dict>
-				<key>UTTypeIconFile</key>
-				<string>generic-text.icns</string>
 			</dict>
 		</array>
+
 		<key>UIBackgroundModes</key>
 		<array>
 			<string>fetch</string>
 		</array>
+
 		<key>UISupportsPrinting</key>
 		<true/>
 		<key>UIApplicationSupportsPrintCommand</key>
 		<true/>
+
 		<!-- iCloud container comes here -->
 	</dict>
 </plist>

@@ -11,7 +11,7 @@
 	<Identity 
 		Name="maui-package-name-placeholder" 
 		Publisher="CN=User Name" 
-		Version="2.0.42.0" />
+		Version="3.1.321.0" />
 
 	<mp:PhoneIdentity PhoneProductId="26F9C003-D11C-47CF-873F-EBDE85F9D112" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -26,8 +26,11 @@
 		<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.22621.0" MaxVersionTested="10.0.26100.0" />
 	</Dependencies>
 
+	<!-- <Resource Language="x-generate" />-->
 	<Resources>
-		<Resource Language="x-generate" />
+		<Resource Language="en-US"/>
+		<Resource Language="nb-NO"/>
+		<Resource Language="es-ES"/>
 	</Resources>
 
 	<Applications>
@@ -94,8 +97,6 @@
 		<rescap:Capability Name="runFullTrust" />
 		<Capability Name="internetClient"/>
 		<uap:Capability Name="picturesLibrary"/>
-		<uap:Capability Name="videosLibrary"/>
-		<uap:Capability Name="musicLibrary"/>
 		<uap:Capability Name="removableStorage"/>
 		<DeviceCapability Name="microphone"/>
 	</Capabilities>

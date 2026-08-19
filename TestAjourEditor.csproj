@@ -25,7 +25,7 @@
 		<ApplicationTitle>$(Title)</ApplicationTitle>
 		<Product>$(Title)</Product>
 		<PackageProjectUrl>https://www.ajourmedia.no</PackageProjectUrl>
-		<PackageReleaseNotes>[13. june 2026] Maui 10.0.301.1, Mono 10.0.8, iOS 26.5.10284, MacOS 26.5.10284, Android 36.1.69 16KB, Windows 10.0.26200.</PackageReleaseNotes>
+		<PackageReleaseNotes>[15. aug 2026] Maui 10.0.400.1, Mono 10.0.11, iOS 26.5.10315, MacOS 26.5.10315, Android 36.1.69 16KB, Windows 10.0.26200.</PackageReleaseNotes>
 		<Copyright>© 1991 - 2026 Ajour Media AS. With all rights.</Copyright>
 		<Company>Ajour Media AS</Company>
 		<Authors>Ajour Media Team</Authors>
@@ -40,12 +40,13 @@
 		<RootNamespace>TestAjourEditor</RootNamespace>
 		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 		<AnalysisLevel>preview</AnalysisLevel>
-		<Version>3.0.300</Version>
+		<Version>3.1.321</Version>
 		<ApplicationVersion>3</ApplicationVersion>
 		<ApplicationDisplayVersion>$(Version)</ApplicationDisplayVersion>
 		<NoWarn>1701;1702;CS0168;CS0219;CS0414;CS1570;CS1587;CS8600;CS8602;CS8603;CS8604;CS8618;XC0103;XA0101;CS1591</NoWarn>
 		<DefineConstants>$(DefineConstants);MAUIAPP</DefineConstants>
 		<NeutralLanguage>en</NeutralLanguage>
+		<DefaultLanguage>en</DefaultLanguage>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -78,17 +79,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Ajour.EditorLib" Version="3.0.300" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.80" />
-		<PackageReference Include="CommunityToolkit.Maui" Version="14.2.0" />
+		<PackageReference Include="Ajour.EditorLib" Version="3.1.321" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.90" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="15.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="10.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.9" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.9" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.9" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.9" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.9" />
-		<PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.11" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.11" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.11" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.11" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.11" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.11" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Debug|net10.0-android'">
